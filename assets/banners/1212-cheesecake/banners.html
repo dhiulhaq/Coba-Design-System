@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Banner 12.12 Cheesecake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@500;700;800&display=block" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #ddd; display: flex; flex-direction: column; gap: 40px; padding: 40px; align-items: center; }
+  .banner { width: 1080px; height: 1080px; position: relative; overflow: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .serif { font-family: 'Fraunces', serif; }
+  .logo { position: absolute; top: 96px; left: 108px; height: 56px; padding: 0 28px; border-radius: 28px;
+          display: flex; align-items: center; font-weight: 800; font-size: 20px; letter-spacing: .18em; border: 2px dashed currentColor; opacity: .85; }
+  .cta { position: absolute; right: 108px; bottom: 108px; height: 88px; padding: 0 48px; border-radius: 44px;
+         display: flex; align-items: center; gap: 16px; font-weight: 800; font-size: 32px; }
+  .cta::after { content: "→"; font-size: 36px; }
+
+  /* ---------- 1. Bold Typography ---------- */
+  #bold { background: #A80F36; color: #FFF4E2; }
+  #bold .dots { position: absolute; inset: 0;
+    background-image: radial-gradient(#FFF4E2 2px, transparent 2.5px); background-size: 36px 36px; opacity: .10; }
+  #bold .ring { position: absolute; width: 900px; height: 900px; border-radius: 50%; border: 120px solid #C21A45; right: -380px; top: -300px; }
+  #bold .eyebrow { position: absolute; top: 208px; left: 108px; font-weight: 700; font-size: 34px; letter-spacing: .22em; text-transform: uppercase; color: #FFD27A; }
+  #bold .big { position: absolute; top: 250px; left: 92px; font-weight: 900; font-size: 270px; line-height: 1; letter-spacing: -.04em; }
+  #bold .deal { position: absolute; top: 610px; left: 108px; font-size: 76px; font-weight: 700; line-height: 1.05; }
+  #bold .deal b { color: #FFD27A; font-weight: 900; }
+  #bold .sub { position: absolute; top: 790px; left: 108px; font-size: 30px; font-weight: 500; opacity: .9; }
+  #bold .cta { background: #FFD27A; color: #5A0A1E; }
+  #bold .slice { position: absolute; right: 30px; top: 230px; width: 400px; transform: rotate(-8deg); }
+
+  /* ---------- 2. Illustrated / Warm ---------- */
+  #warm { background: #FFF1DE; color: #3A2214; }
+  #warm .blob { position: absolute; border-radius: 50%; }
+  #warm .b1 { width: 760px; height: 760px; background: #FFDFB8; right: -170px; top: 150px; }
+  #warm .b2 { width: 220px; height: 220px; background: #F7C7CF; left: -70px; bottom: -60px; }
+  #warm .confetti span { position: absolute; width: 18px; height: 18px; border-radius: 4px; }
+  #warm .badge { position: absolute; top: 200px; left: 108px; width: 250px; height: 250px; border-radius: 50%;
+                 background: #C8102E; color: #FFF4E2; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-10deg);
+                 box-shadow: 0 0 0 10px #FFF1DE, 0 0 0 14px #C8102E; }
+  #warm .badge .t { font-size: 22px; font-weight: 800; letter-spacing: .2em; }
+  #warm .badge .n { font-size: 84px; font-weight: 900; line-height: 1; }
+  #warm .head { position: absolute; top: 500px; left: 108px; width: 520px; font-size: 84px; line-height: 1; font-weight: 700; letter-spacing: -.02em; }
+  #warm .head em { font-style: italic; color: #C8102E; }
+  #warm .sub { position: absolute; top: 700px; left: 108px; width: 440px; font-size: 30px; line-height: 1.4; font-weight: 500; }
+  #warm .sub b { font-weight: 800; color: #C8102E; }
+  #warm .cta { background: #3A2214; color: #FFF1DE; }
+  #warm .slice { position: absolute; right: 40px; top: 260px; width: 560px; }
+
+  /* ---------- 3. Dark Moody ---------- */
+  #moody { background: radial-gradient(circle at 50% 46%, #3A2A20 0%, #17110D 62%); color: #F6EBDD; }
+  #moody .frame { position: absolute; inset: 60px; border: 1.5px solid #E2BE7C; opacity: .55; }
+  #moody .logo { left: 50%; transform: translateX(-50%); color: #E2BE7C; }
+  #moody .eyebrow { position: absolute; top: 196px; width: 100%; text-align: center; font-size: 26px; font-weight: 700; letter-spacing: .4em; color: #E2BE7C; }
+  #moody .big { position: absolute; top: 230px; width: 100%; text-align: center; font-size: 190px; font-weight: 500; letter-spacing: .02em; color: #E2BE7C; line-height: 1; }
+  #moody .slice { position: absolute; left: 50%; top: 415px; width: 340px; transform: translateX(-50%); }
+  #moody .head { position: absolute; top: 750px; left: 108px; font-size: 56px; font-weight: 500; line-height: 1.1; font-style: italic; }
+  #moody .head b { font-style: normal; font-weight: 900; color: #E2BE7C; }
+  #moody .sub { position: absolute; top: 880px; left: 108px; font-size: 26px; opacity: .8; }
+  #moody .cta { background: #E2BE7C; color: #17110D; height: 80px; font-size: 28px; bottom: 120px; }
+  #moody .spark { position: absolute; color: #E2BE7C; font-size: 28px; }
+</style>
+</head>
+<body>
+
+<!-- Reusable cheesecake slice (SVG, no text) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="filling" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF6E3"/><stop offset="1" stop-color="#F6DFAF"/>
+    </linearGradient>
+    <linearGradient id="endface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3D9A4"/><stop offset="1" stop-color="#E6C487"/>
+    </linearGradient>
+    <linearGradient id="sauce" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0263F"/><stop offset="1" stop-color="#A50D2A"/>
+    </linearGradient>
+    <g id="cheesecake">
+      <ellipse cx="290" cy="470" rx="275" ry="44" fill="#000" opacity=".16"/>
+      <ellipse cx="290" cy="452" rx="270" ry="42" fill="#FFFFFF"/>
+      <ellipse cx="290" cy="448" rx="230" ry="32" fill="#F1EEEA"/>
+      <!-- end face -->
+      <polygon points="390,120 530,190 530,420 390,350" fill="url(#endface)"/>
+      <polygon points="390,310 530,380 530,420 390,350" fill="#B07A3E"/>
+      <!-- front face -->
+      <polygon points="40,240 530,190 530,420 40,440" fill="url(#filling)"/>
+      <polygon points="40,400 530,380 530,420 40,440" fill="#B7793A"/>
+      <polygon points="40,400 530,380 530,386 40,406" fill="#8E5A28" opacity=".5"/>
+      <!-- top surface -->
+      <polygon points="40,240 390,120 530,190" fill="#FFF8EC"/>
+      <!-- sauce on top with drips -->
+      <path d="M70,236 L385,128 L515,192 L470,197 C468,240 446,244 444,200 L360,208 C356,268 330,270 328,211 L240,220 C238,250 220,252 216,223 L130,231 C128,282 100,284 98,234 Z" fill="url(#sauce)"/>
+      <!-- strawberries -->
+      <g>
+        <path d="M250,150 c-30,-10 -62,10 -52,42 c8,26 44,36 64,20 c22,-18 18,-54 -12,-62 z" fill="#D7193A"/>
+        <path d="M232,150 l10,-16 l10,14 l12,-10 l-2,18 z" fill="#3E8E41"/>
+        <circle cx="225" cy="175" r="3" fill="#FFE9A8"/><circle cx="245" cy="190" r="3" fill="#FFE9A8"/><circle cx="240" cy="165" r="3" fill="#FFE9A8"/>
+        <path d="M214,168 c4,-10 14,-14 20,-12" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".6"/>
+      </g>
+      <g>
+        <path d="M352,136 c-24,-8 -50,8 -42,34 c6,20 36,28 52,16 c18,-14 14,-44 -10,-50 z" fill="#C3122F"/>
+        <path d="M338,136 l8,-13 l8,11 l10,-8 l-2,15 z" fill="#3E8E41"/>
+        <circle cx="332" cy="158" r="2.5" fill="#FFE9A8"/><circle cx="348" cy="170" r="2.5" fill="#FFE9A8"/>
+      </g>
+      <!-- highlights -->
+      <path d="M60,250 L520,204" stroke="#fff" stroke-width="3" opacity=".5"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- 1. BOLD TYPOGRAPHY -->
+<div class="banner" id="bold">
+  <div class="ring"></div>
+  <div class="dots"></div>
+  <svg class="slice" viewBox="0 0 560 500"><use href="#cheesecake"/></svg>
+  <div class="logo">LOGO</div>
+  <div class="eyebrow">Promo Akhir Tahun</div>
+  <div class="big serif">12.12</div>
+  <div class="deal serif">Cheesecake<br>Diskon <b>s/d 50%</b></div>
+  <div class="sub">Semua varian · Hanya 12 Desember</div>
+  <div class="cta">Pesan Sekarang</div>
+</div>
+
+<!-- 2. ILLUSTRATED / WARM -->
+<div class="banner" id="warm">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="confetti">
+    <span style="left:420px;top:140px;background:#C8102E;transform:rotate(20deg)"></span>
+    <span style="left:560px;top:210px;background:#F2A93B;transform:rotate(-15deg)"></span>
+    <span style="left:930px;top:120px;background:#C8102E;border-radius:50%"></span>
+    <span style="left:470px;top:420px;background:#F2A93B;border-radius:50%"></span>
+    <span style="left:990px;top:330px;background:#7DB37F;transform:rotate(40deg)"></span>
+    <span style="left:700px;top:110px;background:#7DB37F;border-radius:50%"></span>
+  </div>
+  <svg class="slice" viewBox="0 0 560 500"><use href="#cheesecake"/></svg>
+  <div class="logo">LOGO</div>
+  <div class="badge"><div class="t">DISKON S/D</div><div class="n serif">50%</div></div>
+  <div class="head serif">Manisnya <em>12.12</em></div>
+  <div class="sub">Tutup tahun dengan cheesecake favoritmu. <b>Hanya 12 Desember.</b></div>
+  <div class="cta">Pesan Sekarang</div>
+</div>
+
+<!-- 3. DARK MOODY -->
+<div class="banner" id="moody">
+  <div class="frame"></div>
+  <span class="spark" style="left:170px;top:470px">✦</span>
+  <span class="spark" style="left:880px;top:420px;font-size:20px">✦</span>
+  <span class="spark" style="left:860px;top:620px">✦</span>
+  <span class="spark" style="left:200px;top:640px;font-size:18px">✦</span>
+  <div class="logo">LOGO</div>
+  <div class="eyebrow">YEAR-END SALE</div>
+  <div class="big serif">12.12</div>
+  <svg class="slice" viewBox="0 0 560 500"><use href="#cheesecake"/></svg>
+  <div class="head serif">Cheesecake<br><b>diskon s/d 50%</b></div>
+  <div class="sub">Semua varian · 12 Desember saja</div>
+  <div class="cta">Pesan Sekarang</div>
+</div>
+
+</body>
+</html>
