@@ -222,6 +222,15 @@ Pola label: kata kerja ajakan, misalnya "Temukan program kami", "Unduh PDF", "Li
 | **Netral** | Pill putih, border `--line` 1.5px, teks `--text` Manrope 500 | Kategori, label umum (misalnya "Tahfidz", "SD Islam") |
 | **Highlight** | Pill `--binar-navy`, teks **putih** Manrope 600 | Data pendukung yang ingin ditonjolkan: jumlah halaman, jumlah surat, nama surat |
 
+**Teks di dalam pill harus *middle* (tengah vertikal).** Font Manrope punya ruang atas dan bawah yang tidak sama, jadi padding biasa membuat teks tampak turun. Semua pill (tag, kategori, tombol) memakai:
+
+```css
+padding: 15px 20px;                    /* untuk teks 22px */
+text-box: trim-both cap alphabetic;    /* teks dipusatkan dari tinggi huruf kapital */
+```
+
+Kalau pill berisi ikon atau titik (flex), terapkan `text-box` juga ke elemen teksnya (`.tag > span`).
+
 **Aturan tag highlight:**
 - **Amber hanya untuk satu fokus**, yaitu angka besar (juz, statistik). Tag di sekitarnya memakai **navy**, supaya angka tetap jadi pusat perhatian dan tag terbaca sebagai info pendukung.
 - Kontras putih di atas navy sekitar 10:1, jadi aman untuk ukuran apa pun.
@@ -259,6 +268,28 @@ Bar merah "Senin – Kamis 7:30 – 11:00 | Jum'at 7:30 – 10:00" berdampingan 
 - **Set saat ini:** tangan warna-warni (PAUD/TK), gedung sekolah (SD), mushaf di atas rehal dengan tulisan "اقرأ" (Klub Bahasa Arab), orang dengan roda gigi (Life Skill).
 - ⚠️ Warna isiannya (hijau, pink, kuning, cokelat) di luar palet brand.
 - **Usulan:** pertahankan gaya garisnya, tapi batasi isian ke navy, amber, biru muda, dan satu netral hangat. Bintang empat sudut dari logo bisa dipakai sebagai ornamen.
+
+### 7.0 Ornamen
+
+Semua ornamen diturunkan dari **bintang empat sudut** di logo ("Binar" = cahaya). Tidak ada blob, gradien warna-warni, atau bentuk lain.
+
+| Ornamen | Spesifikasi | Kapan dipakai |
+|---|---|---|
+| **Bintang** | Bintang empat sudut solid. Satu bintang besar amber (boleh terpotong di tepi kartu), ditambah 2–4 bintang kecil putih (opacity 18–50%) atau amber. | Semua kartu hero navy. |
+| **Pola bintang** | Bintang kecil putih berulang dengan grid 64px, opacity **≤ 8%**. Dipudarkan (mask) supaya hanya muncul di ruang kosong. | Latar kartu navy yang punya ruang kosong besar, misalnya hero Poster Kajian. |
+| **Orbit** | Lingkaran garis putus-putus 1.5px, putih 12–20%, berpusat di bintang amber besar. Maksimal 2 lingkaran. | Di sekitar bintang besar, sebagai efek "cahaya yang memancar". |
+| **Garis penyerta** | Garis tipis 40px setelah label huruf kapital, misalnya "SEKOLAH ORANG TUA —". | Nama seri atau eyebrow di kartu hero. |
+| **Ikon garis** | Ikon garis navy 2px, 24px (kalender, pin lokasi, mikrofon). | Label di kartu info. |
+| **Emblem** | Lingkaran 270px dengan garis luar putih 35%, teks melingkar Manrope 700 huruf kapital (nama seri ✦ kategori), lingkaran dalam putus-putus, dan inti putih berisi **ikon kitab terbuka** navy dengan bintang amber kecil di atasnya. | Pojok kanan atas hero poster acara (kajian, seminar). Pengganti stempel bulat di poster lama. |
+| **Sinar** | Sinar putih 7% yang memancar dari emblem (`repeating-conic-gradient`, 6° terang dan 12° kosong), dipudarkan melingkar. | Hanya di belakang emblem. |
+| **Watermark kata** | Satu kata Sora 600 sekitar 210px, putih 5–6%, boleh terpotong di tepi kartu. Contoh: "Tarbiyah", "Adab". | Ruang kosong di hero, di belakang judul dan pemateri. Harus tetap samar supaya teks di atasnya terbaca. |
+| **Pola di kartu info** | Pola bintang navy 12% di pojok kartu biru muda, atau bintang `--binar-blue-50` besar yang terpotong di pojok kartu putih. | Kartu tanggal dan lokasi, supaya tidak terlihat kosong. |
+
+**Ikon kitab terbuka** (SVG garis navy 3px, dengan bintang amber kecil di atasnya) adalah ikon resmi untuk konteks ilmu dan kajian. Sumbernya ada di `templates/Poster Kajian/Poster Kajian.html` (elemen `.book`).
+
+Batasan:
+- Ornamen tidak boleh menimpa teks.
+- **Tidak ada lingkaran, orbit, atau bentuk apa pun di belakang foto santri.** Ornamen di template foto hanya bintang.
 
 ### 7.1 Logo platform pihak ketiga (YouTube, Instagram, WhatsApp, dll.)
 
@@ -345,6 +376,9 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 | Template | Status | Lokasi |
 |---|---|---|
 | **Poster Ujian Tahfidz** | ✅ Siap pakai | [`templates/Poster Ujian Tahfidz/`](./templates/Poster%20Ujian%20Tahfidz/) |
+| **Poster Kajian** | ✅ Siap pakai | [`templates/Poster Kajian/`](./templates/Poster%20Kajian/) |
+
+#### Poster Ujian Tahfidz
 
 ![Poster Ujian Tahfidz](./templates/Poster%20Ujian%20Tahfidz/preview.png)
 
@@ -360,6 +394,35 @@ Aturan template ini:
 - Logo dan tag sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Kartu jadwal **tidak boleh hitam/charcoal** (lihat 3.4).
 - Margin poster 56px, jarak antar kartu 20px, padding kartu 40px, radius kartu 36px.
+
+#### Poster Kajian
+
+![Poster Kajian](./templates/Poster%20Kajian/preview.png)
+
+**Poster Kajian** dipakai untuk pengumuman kajian, misalnya seri Sekolah Orang Tua. Fokusnya ke **judul dan pemateri**, berbeda dari Poster Ujian Tahfidz yang fokus ke foto santri. Layoutnya bertumpuk dari atas ke bawah:
+- **Header:** logo di kiri, tag netral "Terbuka untuk umum" di kanan.
+- **Hero navy selebar poster, isinya rata kiri:**
+  - nama seri dalam huruf kapital berjarak, diikuti garis tipis
+  - pill kategori outline putih dan judul Sora 400 78px (maksimal 3 baris), sebagai satu kelompok yang **berada di tengah secara vertikal**: jarak dari label seri ke pill sama dengan jarak dari judul ke garis pemateri
+  - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
+  - ornamen (lihat 7.0):
+    - **emblem** di pojok kanan atas: teks melingkar "SEKOLAH ORANG TUA ✦ KAJIAN TARBIYAH ISLAM", dengan **ikon kitab terbuka** di tengah
+    - **sinar** samar yang memancar dari emblem
+    - **watermark** "Tarbiyah" besar dan samar di belakang judul dan pemateri
+    - bintang kecil putih dan amber, serta pola bintang samar
+- **Ikon garis** kalender dan pin di label kartu tanggal dan lokasi.
+- **Pola di kartu info:** bintang biru muda yang terpotong di pojok kartu tanggal, dan pola bintang navy samar di pojok kartu lokasi.
+- **Baris info, tiga kartu:**
+  - tanggal (putih, **angka tanggal besar solid amber**)
+  - lokasi (`--binar-blue-50`)
+  - QR Maps (putih, QR navy)
+- **Strip keuntungan:** satu pill putih berisi maksimal 3 butir, dengan bullet bintang navy.
+
+Penyesuaian dari poster kajian lama:
+- **Latar:** latar amber penuh dengan gradien blob diganti kanvas, kartu navy, dan kartu putih.
+- **Warna:** kuning lemon dihapus. Amber hanya dipakai untuk angka tanggal dan bintang.
+- **Font:** Poppins diganti Sora dan Manrope.
+- **Badge stempel:** badge melingkar "Terbuka untuk umum" dipindah menjadi tag netral di header. Bentuk melingkarnya dipertahankan sebagai **emblem** seri kajian, dengan ikon kitab terbuka di tengah.
 
 ### 10.3 Template lain (usulan)
 

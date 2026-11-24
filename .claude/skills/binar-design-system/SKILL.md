@@ -47,9 +47,20 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
   - **Highlight:** latar **navy**, teks **putih** weight 600, isi 1–4 kata. Untuk data pendukung hafalan (jumlah halaman/surat, nama surat).
 - Amber hanya untuk **satu fokus**, yaitu angka besar. Jangan memberi warna amber pada tag di sekitar angka itu.
 - Tombol: pill navy, teks putih, diakhiri chevron `›`.
+- Teks di semua pill harus **middle**: `padding: 15px 20px` + `text-box: trim-both cap alphabetic`. Kalau pillnya flex dengan ikon atau titik, terapkan juga ke span teksnya. Cek di render dengan zoom.
 - Logo Binar: pakai file resmi, jangan diketik ulang atau diwarnai ulang. Di poster, logo sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Logo platform (YouTube, Instagram, WhatsApp): pakai **file resmi** dengan warna aslinya, jangan digambar ulang dengan CSS. Ikon YouTube ada di `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/youtube-icon.png`.
-- Tidak ada lingkaran atau blob dekoratif di belakang foto santri. Ornamen yang dipakai hanya **bintang empat sudut** dari logo.
+- Ornamen hanya turunan **bintang empat sudut** dari logo (detail di bagian 7.0 dokumen):
+  - bintang solid (satu besar amber, beberapa kecil putih atau amber)
+  - pola bintang samar (opacity ≤ 8%, dipudarkan)
+  - orbit garis putus-putus di sekitar bintang besar (maksimal 2)
+  - garis penyerta setelah label huruf kapital
+  - ikon garis navy 2px (kalender, pin, mikrofon, **kitab terbuka** untuk konteks ilmu dan kajian)
+  - emblem melingkar (teks seri ✦ kategori, inti putih berisi ikon kitab), dengan sinar samar 7% di belakangnya
+  - watermark satu kata Sora sekitar 210px, putih 5–6%
+  - pola bintang atau bintang terpotong di pojok kartu info
+- Tidak ada blob atau gradien warna. Ornamen tidak boleh menimpa teks.
+- **Di belakang foto santri tidak boleh ada lingkaran, orbit, atau bentuk apa pun.** Ornamen di sana cukup bintang.
 - Penulisan: "Binar Sunnah" (dua n), "YouTube", "Jum'at". Sapaan ke orang tua: "Ayah & Bunda", ke anak: "ananda".
 
 ## Privasi anak
@@ -62,6 +73,11 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 | Template | Folder | Ukuran |
 |---|---|---|
 | Poster Ujian Tahfidz | `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/` | 1080×1350 |
+| Poster Kajian | `docs/binar-sunnah-school/templates/Poster Kajian/` | 1080×1350 |
+
+**Memilih template:**
+- Ujian, setoran, atau prestasi santri (fokus ke foto anak) → **Poster Ujian Tahfidz**.
+- Kajian, seminar, atau acara orang tua (fokus ke judul dan pemateri) → **Poster Kajian**. Pada template ini amber hanya dipakai untuk angka tanggal.
 
 **Cara pakai Poster Ujian Tahfidz:**
 1. Isi objek `DATA` di file HTML.
