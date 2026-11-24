@@ -19,6 +19,7 @@ Repo eksperimen untuk membangun **design system dan materi visual** dengan bantu
 ├── docs/binar-sunnah-school/
 │   ├── Design System Binar.md             # Dokumentasi lengkap design system
 │   ├── tokens.css                         # Token CSS siap pakai
+│   ├── Design System Binar.html           # Ringkasan visual design system
 │   ├── brand-audit.html                   # Audit visual brand (halaman HTML)
 │   └── templates/
 │       ├── Poster Ujian Tahfidz/          # Template Instagram 1080×1350
