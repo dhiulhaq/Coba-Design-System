@@ -387,6 +387,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 | **Poster Ujian Tahfidz** | ✅ Siap pakai | [`templates/Poster Ujian Tahfidz/`](./templates/Poster%20Ujian%20Tahfidz/) |
 | **Poster Kajian** | ✅ Siap pakai | [`templates/Poster Kajian/`](./templates/Poster%20Kajian/) |
 | **Poster Event** | ✅ Siap pakai | [`templates/Poster Event/`](./templates/Poster%20Event/) |
+| **Rundown Acara** | ✅ Siap pakai | [`templates/Rundown Acara/`](./templates/Rundown%20Acara/) |
 
 #### Poster Ujian Tahfidz
 
@@ -455,6 +456,23 @@ Penyesuaian dari poster event lama:
 - **Ikon materi:** lingkaran putih di atas amber diganti ikon garis navy di lingkaran biru muda. Amber hanya untuk angka tanggal.
 - **Font:** Poppins diganti Sora dan Manrope.
 - **Ayat dan terjemahan** di bagian bawah dihapus, supaya poster fokus ke foto, waktu, dan tempat.
+
+#### Rundown Acara
+
+![Rundown Acara](./templates/Rundown%20Acara/preview.png)
+
+**Rundown Acara** adalah pasangan Poster Event: poster mengumumkan acaranya, rundown menjelaskan urutan acaranya.
+- **Hero navy ringkas:** nama acara, tempat, dan kartu tanggal putih di kanan dengan angka tanggal amber (satu fokus).
+- **Kartu timeline putih:**
+  - kolom waktu `07.00–08.00`
+  - garis vertikal dengan titik bintang navy
+  - agenda dan keterangan, dengan nama MC atau pemberi sambutan ditebalkan navy
+- **Inti acara disorot** dengan latar `--binar-blue-50` dan bintang lebih besar.
+- **Tidak ada ringkasan waktu.** Jam acara sudah tertera di Poster Event dan di tiap baris rundown.
+
+Aturan:
+- Maksimal 10 baris. Agenda sejenis digabung, misalnya beberapa sambutan menjadi satu baris **"Sambutan-sambutan"** dengan nama-nama di keterangan.
+- Sorot hanya 2–4 baris inti acara.
 
 ### 10.3 Template lain (usulan)
 

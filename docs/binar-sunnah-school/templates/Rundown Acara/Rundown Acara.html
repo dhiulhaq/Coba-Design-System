@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Rundown Acara · Binar Sunnah School</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================
+   Rundown Acara: template Instagram feed 1080×1350 (4:5)
+   Bagian dari Design System Binar (lihat ../../Design System Binar.md)
+   Pasangan dari Poster Event: poster mengumumkan acara,
+   rundown menjelaskan susunan acaranya.
+   Layout: header, hero navy ringkas (nama acara, tanggal, tempat),
+           lalu kartu timeline (waktu · titik bintang · agenda · keterangan).
+   ============================================================ */
+:root{
+  --binar-navy:#2A3B8B; --binar-amber:#F8A012; --binar-blue:#386BB7; --binar-blue-50:#E3EAF5;
+  --ink:#111111; --text:#333333; --muted:#5D6470; --line:#DDE1E7;
+  --canvas:#F0F2F4; --surface:#FFFFFF;
+  --font-display:"Sora",Arial,Helvetica,sans-serif;
+  --font-body:"Manrope",Arial,Helvetica,sans-serif;
+  --tracking-display:-0.03em;
+  --radius-card:36px; --radius-pill:9999px;
+  --margin:56px; --gap:20px; --pad:40px;
+  --star:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+  --col-time:158px; --col-node:40px;
+}
+*{box-sizing:border-box;margin:0}
+body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-content:center;padding:24px}
+.poster{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--canvas);
+  padding:var(--margin);display:flex;flex-direction:column;gap:var(--gap)}
+
+/* Header */
+.top{display:flex;justify-content:space-between;align-items:center;height:84px;flex:none}
+.top img{height:80px;display:block}
+.tags{display:flex;gap:10px}
+.tag{border:1.5px solid var(--line);border-radius:var(--radius-pill);padding:15px 20px;text-box:trim-both cap alphabetic;font-size:22px;font-weight:500;color:var(--text);background:var(--surface)}
+
+/* Hero ringkas */
+.hero{flex:none;background:var(--binar-navy);border-radius:var(--radius-card);position:relative;overflow:hidden;color:#fff;
+  padding:36px var(--pad);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.pattern{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 22l2.2 7.8L42 32l-7.8 2.2L32 42l-2.2-7.8L22 32l7.8-2.2z' fill='%23fff'/%3E%3C/svg%3E");background-size:48px 48px;opacity:.07;
+  -webkit-mask-image:radial-gradient(ellipse 60% 90% at 100% 50%,#000,transparent);mask-image:radial-gradient(ellipse 60% 90% at 100% 50%,#000,transparent)}
+.star{position:absolute;width:var(--s);height:var(--s);background:var(--c,var(--binar-amber));clip-path:var(--star)}
+.hero .main{display:flex;flex-direction:column;gap:14px;position:relative;min-width:0}
+.eyebrow{font-size:20px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.75;display:flex;align-items:center;gap:16px}
+.eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor;opacity:.6}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:56px;line-height:1.02;letter-spacing:var(--tracking-display)}
+.place{display:flex;align-items:center;gap:10px;font-size:22px;opacity:.85}
+.place svg{width:24px;height:24px;flex:none}
+.date{position:relative;background:var(--surface);color:var(--binar-navy);border-radius:28px;padding:22px 26px;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:170px}
+.date .day{font-size:20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.date .num{font-family:var(--font-display);font-weight:600;font-size:96px;line-height:.85;letter-spacing:-.05em;color:var(--binar-amber)}
+.date .my{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:-.01em}
+
+/* Timeline */
+.timeline{flex:1;min-height:0;background:var(--surface);border-radius:var(--radius-card);padding:30px var(--pad) 26px;display:flex;flex-direction:column}
+.thead,.row{display:grid;grid-template-columns:var(--col-time) var(--col-node) 0.9fr 1.1fr;column-gap:16px}
+.thead{font-size:17px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted);padding:0 16px 14px;border-bottom:1.5px solid var(--line)}
+.thead span:nth-child(2){visibility:hidden}
+.rows{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:4px;position:relative;padding-block:10px}
+/* garis vertikal melewati semua titik */
+.rows::before{content:"";position:absolute;top:24px;bottom:24px;left:calc(16px + var(--col-time) + 16px + var(--col-node) / 2 - 1px);width:2px;background:var(--line)}
+.row{align-items:center;padding:12px 16px;border-radius:20px;position:relative}
+.row.sorot{background:var(--binar-blue-50)}
+.time{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:-.01em;color:var(--binar-navy);font-variant-numeric:tabular-nums;white-space:nowrap}
+.time span{color:var(--muted);font-weight:400;margin:0 2px}
+.node{width:var(--col-node);display:flex;justify-content:center}
+.node i{width:20px;height:20px;background:var(--binar-navy);clip-path:var(--star);outline:6px solid var(--surface)}
+.row.sorot .node i{width:26px;height:26px}
+.agenda{font-size:23px;font-weight:700;color:var(--ink);line-height:1.25}
+.ket{font-size:19px;line-height:1.4;color:var(--muted)}
+.ket b{color:var(--binar-navy);font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ISI RUNDOWN: ubah nilai di bawah ini saja.
+     rundown : daftar acara berurutan, maksimal 10 baris supaya muat.
+               mulai/selesai format "07.00". sorot: true untuk inti acara
+               (diberi latar biru muda). Bagian dalam **...** di keterangan
+               ditebalkan navy (misalnya nama MC atau pemberi sambutan).
+     ============================================================ -->
+<script>
+const DATA = {
+  tagHeader: ["Rundown", "TK & SD"],
+  eyebrow:   "Rundown acara",
+  judul:     "Penampilan & Apresiasi Juara",
+  tempat:    "Binar Sunnah School, Petukangan Selatan",
+  hari:      "Sabtu",
+  tanggal:   "12",
+  bulanTahun:"Des 2026",
+  rundown: [
+    { mulai:"07.00", selesai:"08.00", agenda:"Registrasi",                 ket:"Presensi peserta dan tamu undangan" },
+    { mulai:"08.00", selesai:"08.05", agenda:"Pembukaan",                  ket:"MC: **Ustadz Rifqi**" },
+    { mulai:"08.05", selesai:"08.25", agenda:"Sambutan-sambutan",          ket:"**Ustadz Imam, Ustadz Rahmat, Bu Maya, Ustadz Ola**, dan wali murid TK & SD" },
+    { mulai:"08.25", selesai:"08.30", agenda:"Persiapan penampilan",       ket:"Koordinasi peserta" },
+    { mulai:"08.30", selesai:"09.30", agenda:"Penampilan peserta",         ket:"TK A, TK B, Banin, dan Banat", sorot:true },
+    { mulai:"09.30", selesai:"10.30", agenda:"Penampilan juara TK",        ket:"Sesuai urutan penampilan",      sorot:true },
+    { mulai:"10.30", selesai:"11.00", agenda:"Penampilan juara SD",        ket:"Sesuai urutan penampilan",      sorot:true },
+    { mulai:"11.00", selesai:"11.20", agenda:"Pembagian hadiah",           ket:"Seluruh kategori pemenang",     sorot:true },
+    { mulai:"11.20", selesai:"11.27", agenda:"Dokumentasi",                ket:"Foto para juara dan foto bersama" },
+    { mulai:"11.27", selesai:"11.30", agenda:"Penutupan",                  ket:"MC: **Ustadz Rifqi**" }
+  ]
+};
+</script>
+
+<div class="poster" id="poster">
+  <header class="top">
+    <img src="logo.png" alt="Binar Sunnah School">
+    <div class="tags" id="tags"></div>
+  </header>
+
+  <section class="hero">
+    <div class="pattern"></div>
+    <div class="star" style="--s:150px;right:-34px;top:-40px;opacity:.95"></div>
+    <div class="star" style="--s:26px;right:250px;top:34px;--c:#fff;opacity:.45"></div>
+    <div class="main">
+      <span class="eyebrow" data-f="eyebrow"></span>
+      <h1 data-f="judul"></h1>
+      <span class="place"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-f="tempat"></span></span>
+    </div>
+    <div class="date"><span class="day" data-f="hari"></span><span class="num" data-f="tanggal"></span><span class="my" data-f="bulanTahun"></span></div>
+  </section>
+
+  <section class="timeline">
+    <div class="thead"><span>Waktu</span><span></span><span>Agenda</span><span>Keterangan</span></div>
+    <div class="rows" id="rows"></div>
+  </section>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.querySelectorAll('[data-f]').forEach(el => el.textContent = DATA[el.dataset.f] ?? '');
+DATA.tagHeader.forEach(t => { const s = document.createElement('span'); s.className = 'tag'; s.textContent = t; $('tags').appendChild(s); });
+
+const rows = DATA.rundown.slice(0, 10);
+rows.forEach(r => {
+  const d = document.createElement('div'); d.className = 'row' + (r.sorot ? ' sorot' : '');
+  d.innerHTML = '<div class="time">' + esc(r.mulai) + '<span>–</span>' + esc(r.selesai) + '</div>'
+    + '<div class="node"><i></i></div>'
+    + '<div class="agenda">' + esc(r.agenda) + '</div>'
+    + '<div class="ket">' + esc(r.ket).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>') + '</div>';
+  $('rows').appendChild(d);
+});
+</script>
+</body>
+</html>
