@@ -20,6 +20,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman kajian, misalnya s
    - `tanggal`, `bulanTahun`, `hari`, `jam`
    - `tempat`, `alamat`, `qr`
    - `tagHeader`, `keuntungan`
+   - `teksEmblem` (teks melingkar, sekitar 35–45 karakter, diakhiri " ✦ ") dan `watermark` (satu kata samar, misalnya "Tarbiyah")
 2. **QR:** buat QR untuk link Google Maps lokasi, simpan sebagai `qr.png` di folder ini.
 3. **Foto pemateri (opsional):** simpan sebagai `foto-pemateri.png`, lalu isi `fotoPemateri: "foto-pemateri.png"`. Kalau dikosongkan, yang tampil ikon mikrofon.
 4. Ekspor ke PNG:
@@ -31,9 +32,9 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman kajian, misalnya s
 | Area | Isi | Token |
 |---|---|---|
 | Header | Logo sejajar tepi kiri kartu, tag netral "Terbuka untuk umum" sejajar tepi kanan | `--margin: 56px` |
-| Hero (navy, selebar poster, rata kiri) | Seri diikuti garis tipis di atas. Pill kategori outline putih dan judul Sora 400 78px berada di **tengah vertikal**, dengan jarak ke seri dan ke pemateri sama. Lalu garis pemisah, pemateri (avatar/ikon, nama Sora 600 + gelar Arab, peran). Ornamen: bintang amber besar dengan 2 orbit putus-putus, bintang kecil, dan pola bintang samar. | `--binar-navy`, `--radius-card: 36px` |
-| Kartu tanggal (putih) | Ikon kalender + hari, **angka tanggal besar solid amber**, bulan dan tahun, jam | `--surface`, `--binar-amber` |
-| Kartu lokasi (biru muda) | Ikon pin + label, nama tempat Sora 600 navy, alamat | `--binar-blue-50` |
+| Hero (navy, selebar poster, rata kiri) | Seri diikuti garis tipis di atas. Pill kategori outline putih dan judul Sora 400 78px berada di **tengah vertikal**, dengan jarak ke seri dan ke pemateri sama. Lalu garis pemisah, pemateri (avatar/ikon, nama Sora 600 + gelar Arab, peran). Ornamen: **emblem** melingkar dengan ikon kitab terbuka di pojok kanan atas, sinar samar dari emblem, **watermark** kata besar, bintang kecil, dan pola bintang samar. | `--binar-navy`, `--radius-card: 36px` |
+| Kartu tanggal (putih) | Bintang biru muda terpotong di pojok. Ikon kalender + hari, **angka tanggal besar solid amber**, bulan dan tahun, jam | `--surface`, `--binar-amber` |
+| Kartu lokasi (biru muda) | Pola bintang navy samar di pojok. Ikon pin + label, nama tempat Sora 600 navy, alamat | `--binar-blue-50` |
 | Kartu QR (putih) | QR navy dan label "Buka Maps ›" | `--surface` |
 | Strip keuntungan (pill putih) | Maksimal 3 butir pendek, bullet bintang navy | `--surface`, `--binar-navy` |
 
@@ -42,6 +43,8 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman kajian, misalnya s
 - **Judul maksimal 3 baris.** Kalau lebih panjang, persingkat judulnya. Ukuran font jangan dikecilkan.
 - **Gelar Arab** (حفظه الله) memakai font Noto Naskh Arabic, diletakkan setelah nama pemateri.
 - **Keuntungan maksimal 3 butir**, cukup satu baris. Bagian yang ditulis `**...**` akan ditebalkan dengan warna navy.
-- Tidak ada blob, gradien, atau kuning lemon. Ornamen hanya turunan bintang empat sudut: bintang, pola bintang samar, orbit, garis penyerta, dan ikon garis (lihat [7.0 Ornamen](../../Design%20System%20Binar.md#70-ornamen)).
+- Tidak ada blob, gradien, atau kuning lemon. Ornamen hanya turunan bintang empat sudut: bintang, pola bintang samar, emblem, sinar, watermark, garis penyerta, dan ikon garis (lihat [7.0 Ornamen](../../Design%20System%20Binar.md#70-ornamen)).
 - Ornamen tidak boleh menimpa judul atau teks lain. Kalau judul berubah panjang, cek ulang posisi bintang kecil.
+- **Teks emblem** harus pas satu lingkaran. Panjangnya diatur otomatis (`textLength`), tapi teks yang terlalu panjang akan terlihat rapat. Usahakan 35–45 karakter.
+- **Watermark** cukup satu kata, dan tetap samar (5–6%).
 - **Jangan pakai hitam atau charcoal bersama amber.**

@@ -55,7 +55,10 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
   - pola bintang samar (opacity ≤ 8%, dipudarkan)
   - orbit garis putus-putus di sekitar bintang besar (maksimal 2)
   - garis penyerta setelah label huruf kapital
-  - ikon garis navy 2px
+  - ikon garis navy 2px (kalender, pin, mikrofon, **kitab terbuka** untuk konteks ilmu dan kajian)
+  - emblem melingkar (teks seri ✦ kategori, inti putih berisi ikon kitab), dengan sinar samar 7% di belakangnya
+  - watermark satu kata Sora sekitar 210px, putih 5–6%
+  - pola bintang atau bintang terpotong di pojok kartu info
 - Tidak ada blob atau gradien warna. Ornamen tidak boleh menimpa teks.
 - **Di belakang foto santri tidak boleh ada lingkaran, orbit, atau bentuk apa pun.** Ornamen di sana cukup bintang.
 - Penulisan: "Binar Sunnah" (dua n), "YouTube", "Jum'at". Sapaan ke orang tua: "Ayah & Bunda", ke anak: "ananda".

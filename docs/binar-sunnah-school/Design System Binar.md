@@ -280,6 +280,12 @@ Semua ornamen diturunkan dari **bintang empat sudut** di logo ("Binar" = cahaya)
 | **Orbit** | Lingkaran garis putus-putus 1.5px, putih 12–20%, berpusat di bintang amber besar. Maksimal 2 lingkaran. | Di sekitar bintang besar, sebagai efek "cahaya yang memancar". |
 | **Garis penyerta** | Garis tipis 40px setelah label huruf kapital, misalnya "SEKOLAH ORANG TUA —". | Nama seri atau eyebrow di kartu hero. |
 | **Ikon garis** | Ikon garis navy 2px, 24px (kalender, pin lokasi, mikrofon). | Label di kartu info. |
+| **Emblem** | Lingkaran 270px dengan garis luar putih 35%, teks melingkar Manrope 700 huruf kapital (nama seri ✦ kategori), lingkaran dalam putus-putus, dan inti putih berisi **ikon kitab terbuka** navy dengan bintang amber kecil di atasnya. | Pojok kanan atas hero poster acara (kajian, seminar). Pengganti stempel bulat di poster lama. |
+| **Sinar** | Sinar putih 7% yang memancar dari emblem (`repeating-conic-gradient`, 6° terang dan 12° kosong), dipudarkan melingkar. | Hanya di belakang emblem. |
+| **Watermark kata** | Satu kata Sora 600 sekitar 210px, putih 5–6%, boleh terpotong di tepi kartu. Contoh: "Tarbiyah", "Adab". | Ruang kosong di hero, di belakang judul dan pemateri. Harus tetap samar supaya teks di atasnya terbaca. |
+| **Pola di kartu info** | Pola bintang navy 12% di pojok kartu biru muda, atau bintang `--binar-blue-50` besar yang terpotong di pojok kartu putih. | Kartu tanggal dan lokasi, supaya tidak terlihat kosong. |
+
+**Ikon kitab terbuka** (SVG garis navy 3px, dengan bintang amber kecil di atasnya) adalah ikon resmi untuk konteks ilmu dan kajian. Sumbernya ada di `templates/Poster Kajian/Poster Kajian.html` (elemen `.book`).
 
 Batasan:
 - Ornamen tidak boleh menimpa teks.
@@ -400,10 +406,12 @@ Aturan template ini:
   - pill kategori outline putih dan judul Sora 400 78px (maksimal 3 baris), sebagai satu kelompok yang **berada di tengah secara vertikal**: jarak dari label seri ke pill sama dengan jarak dari judul ke garis pemateri
   - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
   - ornamen (lihat 7.0):
-    - bintang amber besar yang terpotong di pojok kanan atas, dengan 2 orbit putus-putus
-    - bintang kecil putih dan amber
-    - pola bintang samar di ruang kosong di bawah judul
+    - **emblem** di pojok kanan atas: teks melingkar "SEKOLAH ORANG TUA ✦ KAJIAN TARBIYAH ISLAM", dengan **ikon kitab terbuka** di tengah
+    - **sinar** samar yang memancar dari emblem
+    - **watermark** "Tarbiyah" besar dan samar di belakang judul dan pemateri
+    - bintang kecil putih dan amber, serta pola bintang samar
 - **Ikon garis** kalender dan pin di label kartu tanggal dan lokasi.
+- **Pola di kartu info:** bintang biru muda yang terpotong di pojok kartu tanggal, dan pola bintang navy samar di pojok kartu lokasi.
 - **Baris info, tiga kartu:**
   - tanggal (putih, **angka tanggal besar solid amber**)
   - lokasi (`--binar-blue-50`)
@@ -414,7 +422,7 @@ Penyesuaian dari poster kajian lama:
 - **Latar:** latar amber penuh dengan gradien blob diganti kanvas, kartu navy, dan kartu putih.
 - **Warna:** kuning lemon dihapus. Amber hanya dipakai untuk angka tanggal dan bintang.
 - **Font:** Poppins diganti Sora dan Manrope.
-- **Badge stempel:** badge melingkar "Terbuka untuk umum" diganti tag netral di header.
+- **Badge stempel:** badge melingkar "Terbuka untuk umum" dipindah menjadi tag netral di header. Bentuk melingkarnya dipertahankan sebagai **emblem** seri kajian, dengan ikon kitab terbuka di tengah.
 
 ### 10.3 Template lain (usulan)
 
