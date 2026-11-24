@@ -60,7 +60,7 @@ h1{font-family:var(--font-display);font-weight:400;font-size:76px;line-height:.9
 .juz{display:flex;align-items:flex-end;gap:14px;margin-top:4px}
 .juz span{font-family:var(--font-display);font-size:34px;color:var(--binar-navy);font-weight:600;padding-bottom:22px}
 .juz b{font-family:var(--font-display);font-weight:600;font-size:200px;line-height:.8;letter-spacing:-.05em;color:var(--binar-amber)}
-.info .tags{margin-top:auto}
+.juz-group{margin-top:auto;display:flex;flex-direction:column;gap:28px}
 /* Tag highlight (juz & nama surat): amber + teks navy, bukan teks hitam */
 .info .tag{background:var(--binar-amber);border-color:var(--binar-amber);color:var(--binar-navy);font-weight:600}
 
@@ -121,8 +121,10 @@ const DATA = {
   <section class="info">
     <span class="eyebrow">Ujian Tahfidz</span>
     <h1 data-f="judul"></h1>
-    <div class="juz"><span>Juz</span><b data-f="juz"></b></div>
-    <div class="tags" data-list="tagInfo"></div>
+    <div class="juz-group">
+      <div class="juz"><span>Juz</span><b data-f="juz"></b></div>
+      <div class="tags" data-list="tagInfo"></div>
+    </div>
   </section>
 
   <section class="schedule">
