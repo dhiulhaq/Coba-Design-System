@@ -260,6 +260,22 @@ Bar merah "Senin – Kamis 7:30 – 11:00 | Jum'at 7:30 – 10:00" berdampingan 
 - ⚠️ Warna isiannya (hijau, pink, kuning, cokelat) di luar palet brand.
 - **Usulan:** pertahankan gaya garisnya, tapi batasi isian ke navy, amber, biru muda, dan satu netral hangat. Bintang empat sudut dari logo bisa dipakai sebagai ornamen.
 
+### 7.0 Ornamen
+
+Semua ornamen diturunkan dari **bintang empat sudut** di logo ("Binar" = cahaya). Tidak ada blob, gradien warna-warni, atau bentuk lain.
+
+| Ornamen | Spesifikasi | Kapan dipakai |
+|---|---|---|
+| **Bintang** | Bintang empat sudut solid. Satu bintang besar amber (boleh terpotong di tepi kartu), ditambah 2–4 bintang kecil putih (opacity 18–50%) atau amber. | Semua kartu hero navy. |
+| **Pola bintang** | Bintang kecil putih berulang dengan grid 64px, opacity **≤ 8%**. Dipudarkan (mask) supaya hanya muncul di ruang kosong. | Latar kartu navy yang punya ruang kosong besar, misalnya hero Poster Kajian. |
+| **Orbit** | Lingkaran garis putus-putus 1.5px, putih 12–20%, berpusat di bintang amber besar. Maksimal 2 lingkaran. | Di sekitar bintang besar, sebagai efek "cahaya yang memancar". |
+| **Garis pengapit** | Garis tipis 40px di kiri dan kanan label huruf kapital, misalnya "— SEKOLAH ORANG TUA —". | Nama seri atau eyebrow yang rata tengah. |
+| **Ikon garis** | Ikon garis navy 2px, 24px (kalender, pin lokasi, mikrofon). | Label di kartu info. |
+
+Batasan:
+- Ornamen tidak boleh menimpa teks.
+- **Tidak ada lingkaran, orbit, atau bentuk apa pun di belakang foto santri.** Ornamen di template foto hanya bintang.
+
 ### 7.1 Logo platform pihak ketiga (YouTube, Instagram, WhatsApp, dll.)
 
 Logo platform **selalu memakai file resmi** dari pemiliknya. Logo ini tidak ikut aturan warna Binar.
@@ -370,12 +386,16 @@ Aturan template ini:
 
 **Poster Kajian** dipakai untuk pengumuman kajian, misalnya seri Sekolah Orang Tua. Fokusnya ke **judul dan pemateri**, berbeda dari Poster Ujian Tahfidz yang fokus ke foto santri. Layoutnya bertumpuk dari atas ke bawah:
 - **Header:** logo di kiri, tag netral "Terbuka untuk umum" di kanan.
-- **Hero navy selebar poster:**
-  - nama seri dalam huruf kapital berjarak
+- **Hero navy selebar poster, semua isinya rata tengah:**
+  - nama seri dalam huruf kapital berjarak, diapit garis tipis
   - pill kategori outline putih
   - judul Sora 400 78px, maksimal 3 baris
   - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
-  - bintang amber besar yang terpotong di pojok kanan atas
+  - ornamen (lihat 7.0):
+    - bintang amber besar yang terpotong di pojok kanan atas, dengan 2 orbit putus-putus
+    - bintang kecil putih dan amber
+    - pola bintang samar di ruang kosong di bawah judul
+- **Ikon garis** kalender dan pin di label kartu tanggal dan lokasi.
 - **Baris info, tiga kartu:**
   - tanggal (putih, **angka tanggal besar solid amber**)
   - lokasi (`--binar-blue-50`)
