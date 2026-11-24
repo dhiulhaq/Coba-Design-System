@@ -36,7 +36,7 @@ Dokumentasi lengkap ada di [`docs/binar-sunnah-school/Design System Binar.md`](d
 | | Token | Hex | Peran |
 |---|---|---|---|
 | 🟦 | `--binar-navy` | `#2A3B8B` | Primer: kartu foto, tombol, badge |
-| 🟧 | `--binar-amber` | `#F8A012` | Aksen: angka besar, bintang, tag highlight |
+| 🟧 | `--binar-amber` | `#F8A012` | Aksen: angka besar (juz, statistik), bintang |
 | 🔷 | `--binar-blue` | `#386BB7` | Sekunder: link |
 | ⬜ | `--binar-blue-50` | `#E3EAF5` | Panel sekunder: kartu jadwal/info |
 | ⬜ | `--canvas` | `#F0F2F4` | Latar halaman / poster |

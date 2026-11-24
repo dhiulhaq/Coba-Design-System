@@ -21,7 +21,7 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 | Token | Nilai | Peran |
 |---|---|---|
 | `--binar-navy` | `#2A3B8B` | Primer: kartu foto, tombol, badge, teks penting |
-| `--binar-amber` | `#F8A012` | Aksen: angka besar, bintang, tag highlight |
+| `--binar-amber` | `#F8A012` | Aksen: angka besar, bintang (satu fokus per desain) |
 | `--binar-blue` | `#386BB7` | Sekunder: link |
 | `--binar-blue-50` | `#E3EAF5` | Panel sekunder: kartu jadwal/info |
 | `--ink` / `--text` / `--muted` | `#111111` / `#333333` / `#5D6470` | Teks |
@@ -44,7 +44,8 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 - Angka besar (juz, statistik) **solid amber**, tidak outline.
 - Tag ada dua varian:
   - **Netral:** putih, border `--line`, teks `--text`. Untuk kategori.
-  - **Highlight:** latar amber, teks **putih** weight 700, minimal 22px, isi 1–4 kata. Untuk data hafalan.
+  - **Highlight:** latar **navy**, teks **putih** weight 600, isi 1–4 kata. Untuk data pendukung hafalan (jumlah halaman/surat, nama surat).
+- Amber hanya untuk **satu fokus**, yaitu angka besar. Jangan memberi warna amber pada tag di sekitar angka itu.
 - Tombol: pill navy, teks putih, diakhiri chevron `›`.
 - Logo Binar: pakai file resmi, jangan diketik ulang atau diwarnai ulang. Di poster, logo sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Logo platform (YouTube, Instagram, WhatsApp): pakai **file resmi** dengan warna aslinya, jangan digambar ulang dengan CSS. Ikon YouTube ada di `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/youtube-icon.png`.
