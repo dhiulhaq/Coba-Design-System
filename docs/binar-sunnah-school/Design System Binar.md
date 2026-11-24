@@ -200,6 +200,16 @@ Tema juga memuat Roboto, Roboto Slab, Inter, dan Cardo yang tidak terlihat dipak
 Pola label: kata kerja ajakan, misalnya "Temukan program kami", "Unduh PDF", "Lihat lebih banyak", "Berlangganan".
 
 ### 6.2 Tag / chip
+
+**Dua varian:**
+
+| Varian | Spesifikasi | Pemakaian |
+|---|---|---|
+| **Netral** | Pill putih, border `--line` 1.5px, teks `--text` Manrope 500 | Kategori, label umum (misalnya "Tahfidz", "SD Islam") |
+| **Highlight** | Pill `--binar-amber`, teks `--binar-navy` Manrope 600 | Data yang ingin ditonjolkan: target juz, jumlah surat, nama surat |
+
+Di atas amber, teks selalu **navy**, tidak pernah hitam (aturan 3.4). Kontrasnya sekitar 4.8:1, aman untuk teks 22px ke atas di poster.
+
 Pill outline tipis, teks 11–12px. Isinya **target konkret** program, misalnya `100 Doa Harian` · `50 Hadits` · `Target Juz 30` · `25 Hadits` · `Target 15 Surat Pendek`. Di kartu event, tag dipakai untuk kategori, misalnya `akhlak` · `tarbiyah` · `kompetisi`.
 
 ### 6.3 Statistik
@@ -304,7 +314,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 **Poster Ujian Tahfidz** adalah layout bento dengan empat area:
 - **Header:** logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu.
 - **Kartu foto (kiri):** navy dengan foto santri di tengah dan gradien navy di bawah nama.
-- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**.
+- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Jumlah dan nama surat memakai **tag highlight** (amber, teks navy).
 - **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy.
 
 Aturan template ini:

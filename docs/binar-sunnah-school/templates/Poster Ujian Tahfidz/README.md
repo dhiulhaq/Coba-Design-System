@@ -33,11 +33,12 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman ujian tahfidz sant
 |---|---|---|
 | Header | Logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu | `--margin: 56px` |
 | Kartu foto | Latar navy, 2 bintang, foto di tengah, gradien navy di bawah, nama | `--binar-navy`, `--radius-card: 36px` |
-| Kartu info | Eyebrow, judul Sora 400, "Juz" + angka besar **solid amber**, tag | `--surface`, `--binar-amber` |
+| Kartu info | Eyebrow, judul Sora 400, "Juz" + angka besar **solid amber**, tag highlight (jumlah dan nama surat) amber dengan teks navy | `--surface`, `--binar-amber` |
 | Kartu jadwal | Badge tanggal navy, hari dan jam, tempat, tombol pill navy | `--binar-blue-50` |
 
 ## Aturan
 - Angka juz selalu **solid amber**, jangan dibuat outline.
+- Tag di kartu info (jumlah surat, rentang surat) adalah **tag highlight**: latar amber, teks **navy** Manrope 600. Jangan pakai teks hitam di atas amber. Tag di header tetap netral (putih, border abu).
 - Kartu jadwal memakai **biru muda `--binar-blue-50`**. **Jangan pakai hitam atau charcoal bersama amber.**
 - Logo dan tag sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Tidak ada lingkaran atau bentuk dekoratif di belakang foto. Cukup latar navy dan bintang.
