@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Poster Kajian · Binar Sunnah School</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500&display=swap">
+<style>
+/* ============================================================
+   Poster Kajian: template Instagram feed 1080×1350 (4:5)
+   Bagian dari Design System Binar (lihat ../../Design System Binar.md)
+   Layout: header (logo + tag), kartu hero navy selebar poster
+           (seri, kategori, judul, pemateri), lalu baris info
+           (tanggal, lokasi, QR), lalu strip keuntungan.
+   ============================================================ */
+:root{
+  /* Token brand */
+  --binar-navy:#2A3B8B;
+  --binar-amber:#F8A012;
+  --binar-blue:#386BB7;
+  --binar-blue-50:#E3EAF5;
+  /* Netral */
+  --ink:#111111; --text:#333333; --muted:#5D6470; --line:#DDE1E7;
+  --canvas:#F0F2F4; --surface:#FFFFFF;
+  /* Tipografi */
+  --font-display:"Sora",Arial,Helvetica,sans-serif;
+  --font-body:"Manrope",Arial,Helvetica,sans-serif;
+  --font-arabic:"Noto Naskh Arabic","Amiri",serif;
+  --tracking-display:-0.03em;
+  /* Bentuk */
+  --radius-card:36px; --radius-badge:10px; --radius-pill:9999px;
+  /* Layout */
+  --margin:56px; --gap:20px; --pad:40px;
+}
+*{box-sizing:border-box;margin:0}
+body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-content:center;padding:24px}
+.poster{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--canvas);
+  padding:var(--margin);display:flex;flex-direction:column;gap:var(--gap)}
+
+/* Header: logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu */
+.top{display:flex;justify-content:space-between;align-items:center;height:84px;flex:none}
+.top img{height:80px;display:block}
+.tag{border:1.5px solid var(--line);border-radius:var(--radius-pill);padding:8px 20px;font-size:22px;font-weight:500;color:var(--text);background:var(--surface);display:inline-flex;align-items:center;gap:10px}
+.tag .dot{width:10px;height:10px;border-radius:50%;background:var(--binar-navy)}
+
+/* Hero navy */
+.hero{flex:1;background:var(--binar-navy);border-radius:var(--radius-card);padding:48px var(--pad) var(--pad);position:relative;overflow:hidden;color:#fff;display:flex;flex-direction:column;gap:22px}
+.star{position:absolute;width:var(--s);height:var(--s);background:var(--c,var(--binar-amber));
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.series{font-size:22px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.75;position:relative}
+.cat{align-self:flex-start;border:1.5px solid rgba(255,255,255,.45);border-radius:var(--radius-pill);padding:8px 22px;font-size:22px;font-weight:600;position:relative}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:78px;line-height:1.02;letter-spacing:var(--tracking-display);max-width:820px;text-wrap:balance;position:relative}
+.speaker{margin-top:auto;display:flex;align-items:center;gap:22px;padding-top:28px;border-top:1.5px solid rgba(255,255,255,.2);position:relative}
+.avatar{width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.12);flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar svg{width:44px;height:44px}
+.speaker small{display:block;font-size:20px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;font-weight:600;margin-bottom:4px}
+.speaker .nm{font-family:var(--font-display);font-weight:600;font-size:42px;letter-spacing:var(--tracking-display);line-height:1.1}
+.speaker .ar{font-family:var(--font-arabic);font-size:30px;font-weight:500;opacity:.8;margin-left:16px;letter-spacing:0;display:inline-block}
+.speaker .role{font-size:22px;opacity:.75;margin-top:2px}
+
+/* Baris info */
+.info{display:grid;grid-template-columns:250px 1fr 232px;gap:var(--gap);flex:none}
+.card{border-radius:var(--radius-card);padding:30px 32px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.label{font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.date{background:var(--surface)}
+.date .num{font-family:var(--font-display);font-weight:600;font-size:120px;line-height:.85;letter-spacing:-.05em;color:var(--binar-amber);margin-top:6px}
+.date .my{font-family:var(--font-display);font-size:26px;color:var(--binar-navy);font-weight:600;letter-spacing:-.01em}
+.date .dt{font-size:22px;color:var(--text);line-height:1.4}
+.date .dt b{color:var(--binar-navy)}
+.place{background:var(--binar-blue-50)}
+.place .pn{font-family:var(--font-display);font-weight:600;font-size:36px;color:var(--binar-navy);letter-spacing:var(--tracking-display);line-height:1.1}
+.place .addr{font-size:21px;line-height:1.5;color:var(--text)}
+.qr{background:var(--surface);align-items:center;justify-content:center;padding:24px}
+.qr img{width:172px;height:172px;display:block}
+.qr .cap{font-size:20px;font-weight:700;color:var(--binar-navy);display:flex;align-items:center;gap:6px}
+
+/* Strip keuntungan */
+.perks{flex:none;background:var(--surface);border-radius:var(--radius-pill);padding:22px 30px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 18px;align-items:center}
+.perk{font-size:19px;font-weight:500;color:var(--text);display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.perk i{width:16px;height:16px;flex:none;background:var(--binar-navy);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.perk b{color:var(--binar-navy)}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ISI POSTER: ubah nilai di bawah ini saja.
+     fotoPemateri : opsional. Kosongkan ("") untuk ikon mikrofon.
+     qr           : gambar QR (misalnya link Google Maps), taruh di folder ini.
+     keuntungan   : maksimal 3 butir pendek. Bagian dalam **...** ditebalkan.
+     ============================================================ -->
+<script>
+const DATA = {
+  seri:         "Sekolah Orang Tua",
+  kategori:     "Kajian Pendidikan (Tarbiyah) Islam",
+  judul:        "Komunikasi & Hubungan Orang Tua–Anak",
+  pemateri:     "Ustadz Rahmat Hidayat",
+  gelarArab:    "حفظه الله",
+  peran:        "Konsultan Pendidikan",
+  fotoPemateri: "",
+  tanggal:      "30",
+  bulanTahun:   "Okt 2026",
+  hari:         "Jum'at",
+  jam:          "09.00 – 10.15",
+  tempat:       "Masjid MHT",
+  alamat:       "Jl. H. Nirin No. 63 RT.03/05, Petukangan Selatan, Pesanggrahan, Jakarta Selatan",
+  qr:           "qr.png",
+  labelQr:      "Buka Maps",
+  tagHeader:    "Terbuka untuk umum",
+  keuntungan:   ["Quiz berhadiah", "Diskon formulir pendaftaran", "Gratis konseling bersama **Ustadz Rahmat**"]
+};
+</script>
+
+<div class="poster" id="poster">
+  <header class="top">
+    <img src="logo.png" alt="Binar Sunnah School">
+    <span class="tag"><span class="dot"></span><span data-f="tagHeader"></span></span>
+  </header>
+
+  <section class="hero">
+    <div class="star" style="--s:200px;right:-30px;top:-24px"></div>
+    <div class="star" style="--s:70px;right:210px;top:150px;--c:#fff;opacity:.5"></div>
+    <div class="series" data-f="seri"></div>
+    <div class="cat" data-f="kategori"></div>
+    <h1 data-f="judul"></h1>
+    <div class="speaker">
+      <div class="avatar" id="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></div>
+      <div>
+        <small>Pemateri</small>
+        <div class="nm"><span data-f="pemateri"></span><span class="ar" lang="ar" dir="rtl" data-f="gelarArab"></span></div>
+        <div class="role" data-f="peran"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="card date">
+      <span class="label" data-f="hari"></span>
+      <div class="num" data-f="tanggal"></div>
+      <div class="my" data-f="bulanTahun"></div>
+      <div class="dt"><b data-f="jam"></b> WIB</div>
+    </div>
+    <div class="card place">
+      <span class="label">Lokasi</span>
+      <div class="pn" data-f="tempat"></div>
+      <div class="addr" data-f="alamat"></div>
+    </div>
+    <div class="card qr">
+      <img id="qr" alt="QR lokasi">
+      <span class="cap"><span data-f="labelQr"></span> ›</span>
+    </div>
+  </section>
+
+  <section class="perks" id="perks"></section>
+</div>
+
+<script>
+document.querySelectorAll('[data-f]').forEach(el => el.textContent = DATA[el.dataset.f] ?? '');
+document.getElementById('qr').src = DATA.qr;
+const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+DATA.keuntungan.slice(0, 3).forEach(t => {
+  const p = document.createElement('span'); p.className = 'perk';
+  p.innerHTML = '<i></i><span>' + esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>') + '</span>';
+  document.getElementById('perks').appendChild(p);
+});
+if (DATA.fotoPemateri) {
+  const img = new Image(); img.alt = '';
+  img.onload = () => { const a = document.getElementById('avatar'); a.innerHTML = ''; a.appendChild(img); };
+  img.src = DATA.fotoPemateri;
+}
+</script>
+</body>
+</html>

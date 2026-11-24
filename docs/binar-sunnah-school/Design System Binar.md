@@ -345,6 +345,9 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 | Template | Status | Lokasi |
 |---|---|---|
 | **Poster Ujian Tahfidz** | ✅ Siap pakai | [`templates/Poster Ujian Tahfidz/`](./templates/Poster%20Ujian%20Tahfidz/) |
+| **Poster Kajian** | ✅ Siap pakai | [`templates/Poster Kajian/`](./templates/Poster%20Kajian/) |
+
+#### Poster Ujian Tahfidz
 
 ![Poster Ujian Tahfidz](./templates/Poster%20Ujian%20Tahfidz/preview.png)
 
@@ -360,6 +363,30 @@ Aturan template ini:
 - Logo dan tag sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Kartu jadwal **tidak boleh hitam/charcoal** (lihat 3.4).
 - Margin poster 56px, jarak antar kartu 20px, padding kartu 40px, radius kartu 36px.
+
+#### Poster Kajian
+
+![Poster Kajian](./templates/Poster%20Kajian/preview.png)
+
+**Poster Kajian** dipakai untuk pengumuman kajian, misalnya seri Sekolah Orang Tua. Fokusnya ke **judul dan pemateri**, berbeda dari Poster Ujian Tahfidz yang fokus ke foto santri. Layoutnya bertumpuk dari atas ke bawah:
+- **Header:** logo di kiri, tag netral "Terbuka untuk umum" di kanan.
+- **Hero navy selebar poster:**
+  - nama seri dalam huruf kapital berjarak
+  - pill kategori outline putih
+  - judul Sora 400 78px, maksimal 3 baris
+  - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
+  - bintang amber besar yang terpotong di pojok kanan atas
+- **Baris info, tiga kartu:**
+  - tanggal (putih, **angka tanggal besar solid amber**)
+  - lokasi (`--binar-blue-50`)
+  - QR Maps (putih, QR navy)
+- **Strip keuntungan:** satu pill putih berisi maksimal 3 butir, dengan bullet bintang navy.
+
+Penyesuaian dari poster kajian lama:
+- **Latar:** latar amber penuh dengan gradien blob diganti kanvas, kartu navy, dan kartu putih.
+- **Warna:** kuning lemon dihapus. Amber hanya dipakai untuk angka tanggal dan bintang.
+- **Font:** Poppins diganti Sora dan Manrope.
+- **Badge stempel:** badge melingkar "Terbuka untuk umum" diganti tag netral di header.
 
 ### 10.3 Template lain (usulan)
 

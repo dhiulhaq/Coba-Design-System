@@ -62,6 +62,11 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 | Template | Folder | Ukuran |
 |---|---|---|
 | Poster Ujian Tahfidz | `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/` | 1080×1350 |
+| Poster Kajian | `docs/binar-sunnah-school/templates/Poster Kajian/` | 1080×1350 |
+
+**Memilih template:**
+- Ujian, setoran, atau prestasi santri (fokus ke foto anak) → **Poster Ujian Tahfidz**.
+- Kajian, seminar, atau acara orang tua (fokus ke judul dan pemateri) → **Poster Kajian**. Pada template ini amber hanya dipakai untuk angka tanggal.
 
 **Cara pakai Poster Ujian Tahfidz:**
 1. Isi objek `DATA` di file HTML.
