@@ -47,13 +47,14 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
   - **Highlight:** latar **navy**, teks **putih** weight 600, isi 1–4 kata. Untuk data pendukung hafalan (jumlah halaman/surat, nama surat).
 - Amber hanya untuk **satu fokus**, yaitu angka besar. Jangan memberi warna amber pada tag di sekitar angka itu.
 - Tombol: pill navy, teks putih, diakhiri chevron `›`.
+- Teks di semua pill harus **middle**: `padding: 15px 20px` + `text-box: trim-both cap alphabetic`. Kalau pillnya flex dengan ikon atau titik, terapkan juga ke span teksnya. Cek di render dengan zoom.
 - Logo Binar: pakai file resmi, jangan diketik ulang atau diwarnai ulang. Di poster, logo sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Logo platform (YouTube, Instagram, WhatsApp): pakai **file resmi** dengan warna aslinya, jangan digambar ulang dengan CSS. Ikon YouTube ada di `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/youtube-icon.png`.
 - Ornamen hanya turunan **bintang empat sudut** dari logo (detail di bagian 7.0 dokumen):
   - bintang solid (satu besar amber, beberapa kecil putih atau amber)
   - pola bintang samar (opacity ≤ 8%, dipudarkan)
   - orbit garis putus-putus di sekitar bintang besar (maksimal 2)
-  - garis pengapit untuk label rata tengah
+  - garis penyerta setelah label huruf kapital
   - ikon garis navy 2px
 - Tidak ada blob atau gradien warna. Ornamen tidak boleh menimpa teks.
 - **Di belakang foto santri tidak boleh ada lingkaran, orbit, atau bentuk apa pun.** Ornamen di sana cukup bintang.

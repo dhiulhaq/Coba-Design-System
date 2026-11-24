@@ -222,6 +222,15 @@ Pola label: kata kerja ajakan, misalnya "Temukan program kami", "Unduh PDF", "Li
 | **Netral** | Pill putih, border `--line` 1.5px, teks `--text` Manrope 500 | Kategori, label umum (misalnya "Tahfidz", "SD Islam") |
 | **Highlight** | Pill `--binar-navy`, teks **putih** Manrope 600 | Data pendukung yang ingin ditonjolkan: jumlah halaman, jumlah surat, nama surat |
 
+**Teks di dalam pill harus *middle* (tengah vertikal).** Font Manrope punya ruang atas dan bawah yang tidak sama, jadi padding biasa membuat teks tampak turun. Semua pill (tag, kategori, tombol) memakai:
+
+```css
+padding: 15px 20px;                    /* untuk teks 22px */
+text-box: trim-both cap alphabetic;    /* teks dipusatkan dari tinggi huruf kapital */
+```
+
+Kalau pill berisi ikon atau titik (flex), terapkan `text-box` juga ke elemen teksnya (`.tag > span`).
+
 **Aturan tag highlight:**
 - **Amber hanya untuk satu fokus**, yaitu angka besar (juz, statistik). Tag di sekitarnya memakai **navy**, supaya angka tetap jadi pusat perhatian dan tag terbaca sebagai info pendukung.
 - Kontras putih di atas navy sekitar 10:1, jadi aman untuk ukuran apa pun.
@@ -269,7 +278,7 @@ Semua ornamen diturunkan dari **bintang empat sudut** di logo ("Binar" = cahaya)
 | **Bintang** | Bintang empat sudut solid. Satu bintang besar amber (boleh terpotong di tepi kartu), ditambah 2–4 bintang kecil putih (opacity 18–50%) atau amber. | Semua kartu hero navy. |
 | **Pola bintang** | Bintang kecil putih berulang dengan grid 64px, opacity **≤ 8%**. Dipudarkan (mask) supaya hanya muncul di ruang kosong. | Latar kartu navy yang punya ruang kosong besar, misalnya hero Poster Kajian. |
 | **Orbit** | Lingkaran garis putus-putus 1.5px, putih 12–20%, berpusat di bintang amber besar. Maksimal 2 lingkaran. | Di sekitar bintang besar, sebagai efek "cahaya yang memancar". |
-| **Garis pengapit** | Garis tipis 40px di kiri dan kanan label huruf kapital, misalnya "— SEKOLAH ORANG TUA —". | Nama seri atau eyebrow yang rata tengah. |
+| **Garis penyerta** | Garis tipis 40px setelah label huruf kapital, misalnya "SEKOLAH ORANG TUA —". | Nama seri atau eyebrow di kartu hero. |
 | **Ikon garis** | Ikon garis navy 2px, 24px (kalender, pin lokasi, mikrofon). | Label di kartu info. |
 
 Batasan:
@@ -386,8 +395,8 @@ Aturan template ini:
 
 **Poster Kajian** dipakai untuk pengumuman kajian, misalnya seri Sekolah Orang Tua. Fokusnya ke **judul dan pemateri**, berbeda dari Poster Ujian Tahfidz yang fokus ke foto santri. Layoutnya bertumpuk dari atas ke bawah:
 - **Header:** logo di kiri, tag netral "Terbuka untuk umum" di kanan.
-- **Hero navy selebar poster, semua isinya rata tengah:**
-  - nama seri dalam huruf kapital berjarak, diapit garis tipis
+- **Hero navy selebar poster, isinya rata kiri:**
+  - nama seri dalam huruf kapital berjarak, diikuti garis tipis
   - pill kategori outline putih
   - judul Sora 400 78px, maksimal 3 baris
   - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
