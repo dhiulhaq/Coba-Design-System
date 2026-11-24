@@ -88,11 +88,11 @@ Repo ini sudah terhubung ke Claude Code:
 Cara memakai di komputer sendiri:
 
 ```bash
-git clone https://github.com/dhiulhaq/coba-design-system.git
+git clone https://github.com/dhiulhaq/Coba-Design-System.git
 ```
 
 ```bash
-cd coba-design-system && claude
+cd Coba-Design-System && claude
 ```
 
 Setiap aturan desain baru yang disepakati dicatat di **`Design System Binar.md`** dan **`SKILL.md`** sekaligus, supaya dokumentasi dan perilaku Claude Code tetap sama.
