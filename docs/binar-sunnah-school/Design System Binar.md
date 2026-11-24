@@ -468,7 +468,7 @@ Penyesuaian dari poster event lama:
   - garis vertikal dengan titik bintang navy
   - agenda dan keterangan, dengan nama MC atau pemberi sambutan ditebalkan navy
 - **Inti acara disorot** dengan latar `--binar-blue-50` dan bintang lebih besar.
-- **Ringkasan** mulai, selesai, dan total durasi dihitung otomatis.
+- **Ringkasan** jam mulai dan selesai diisi otomatis.
 
 Aturan:
 - Maksimal 10 baris. Agenda sejenis digabung, misalnya beberapa sambutan menjadi satu baris **"Sambutan-sambutan"** dengan nama-nama di keterangan.

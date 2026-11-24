@@ -129,7 +129,7 @@ const DATA = {
   <section class="timeline">
     <div class="thead"><span>Waktu</span><span></span><span>Agenda</span><span>Keterangan</span></div>
     <div class="rows" id="rows"></div>
-    <div class="foot"><span>Mulai <b id="start"></b> · selesai <b id="end"></b></span><span id="dur"></span></div>
+    <div class="foot"><span>Mulai <b id="start"></b> · selesai <b id="end"></b></span></div>
   </section>
 </div>
 
@@ -148,10 +148,8 @@ rows.forEach(r => {
     + '<div class="ket">' + esc(r.ket).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>') + '</div>';
   $('rows').appendChild(d);
 });
-const toMin = t => { const [h, m] = t.split('.').map(Number); return h * 60 + m; };
-const first = rows[0].mulai, last = rows[rows.length - 1].selesai, mins = toMin(last) - toMin(first);
+const first = rows[0].mulai, last = rows[rows.length - 1].selesai;
 $('start').textContent = first + ' WIB'; $('end').textContent = last + ' WIB';
-$('dur').textContent = 'Total ' + Math.floor(mins / 60) + ' jam' + (mins % 60 ? ' ' + (mins % 60) + ' menit' : '');
 </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk susunan acara. Template ini *
    ```bash
    node export.js rundown-acara.png
    ```
-3. Baris "Mulai · selesai" dan "Total durasi" di bawah dihitung otomatis dari baris pertama dan terakhir.
+3. Baris "Mulai · selesai" di bawah diisi otomatis dari baris pertama dan terakhir.
 
 ## Anatomi
 | Area | Isi | Token |
@@ -31,7 +31,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk susunan acara. Template ini *
 | Header | Logo di kiri, tag netral (misalnya "Rundown", "TK & SD") di kanan | `--margin: 56px` |
 | Hero (navy, ringkas) | Eyebrow dengan garis penyerta, nama acara Sora 600 56px, ikon pin dan tempat. Di kanan ada **kartu tanggal putih** berisi hari, **angka tanggal amber 96px** (satu fokus), bulan dan tahun. Ornamen: bintang amber terpotong dan pola bintang samar. | `--binar-navy`, `--binar-amber` |
 | Timeline (putih) | Kolom **waktu** (Sora 600 navy, `07.00–08.00`), **titik bintang navy** di garis vertikal, **agenda** (Manrope 700), dan **keterangan** (abu, nama tebal navy). Baris inti acara memakai latar `--binar-blue-50` dan bintang lebih besar. | `--surface`, `--binar-blue-50` |
-| Ringkasan | Mulai, selesai, dan total durasi | `--muted` |
+| Ringkasan | Jam mulai dan selesai acara | `--muted` |
 
 ## Aturan
 - **Maksimal 10 baris.** Gabungkan agenda yang sejenis. Contohnya, beberapa sambutan ditulis sebagai satu baris **"Sambutan-sambutan"**, dengan nama pemberi sambutan di keterangan.
