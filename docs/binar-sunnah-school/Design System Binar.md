@@ -2,7 +2,7 @@
 
 Design system untuk **Binar Sunnah School**, sekolah TK dan SD Islam berbasis Al-Qur'an dan As-Sunnah di Petukangan Selatan, Jakarta Selatan. Instagram: [@binarsunnahschool](https://www.instagram.com/binarsunnahschool).
 
-> **Sumber data.** Isi dokumen ini diambil dari website resmi [binarsunnah.org](https://binarsunnah.org) pada 24 November 2026: HTML, CSS, file logo, ikon, dan foto. Warna logo diambil langsung dari piksel PNG resminya. Feed Instagram belum bisa diakses saat analisis, jadi pola grid dan caption Instagram belum terverifikasi.
+> **Sumber data.** Isi dokumen ini diambil dari website resmi [binarsunnah.org](https://binarsunnah.org) pada 24 November 2026: HTML, CSS, file logo, ikon, dan foto. Warna logo diambil langsung dari piksel PNG resminya. Untuk Instagram, referensinya satu poster feed (Ujian Tahfidz Juz 30) yang dikirim tim. Pola grid dan caption feed secara keseluruhan belum terverifikasi.
 >
 > Setiap bagian membedakan dua hal:
 > - **Kondisi saat ini**: apa yang benar-benar dipakai sekarang.
@@ -84,13 +84,18 @@ Design system untuk **Binar Sunnah School**, sekolah TK dan SD Islam berbasis Al
 | `--binar-navy` | `#2A3B8B` | **Primer**: judul penting, tombol solid, latar post |
 | `--binar-amber` | `#F8A012` | **Aksen**: bintang, highlight, angka statistik |
 | `--binar-blue` | `#386BB7` | **Sekunder**: link, ujung gradien |
+| `--binar-blue-50` | `#E3EAF5` | **Panel sekunder**: kartu jadwal/info, latar tag. Tint 14% dari `--binar-blue` |
 | `--ink` | `#111111` | Heading |
 | `--text` | `#333333` | Body |
 | `--muted` | `#5D6470` | Teks sekunder |
 | `--canvas` | `#F0F2F4` | Latar halaman |
 | `--surface` | `#FFFFFF` | Kartu |
-| `--panel-dark` | `#1F1F1F` | Panel gelap, footer |
+| `--panel-dark` | `#1F1F1F` | Hanya footer website. **Bukan** untuk panel konten atau poster |
 | `--alert` | `#E24C4A` | Semantik: tanggal event, info penting (pakai hemat) |
+
+**Catatan `--binar-blue-50`:**
+- Website sudah memakai kartu biru muda `#F1F7FC` (kartu "Unduh biaya SD"). Warna itu terlalu pucat di atas kanvas `#F0F2F4`, jadi untuk Instagram dan panel di atas kanvas dipakai `#E3EAF5`. `#F1F7FC` hanya untuk kartu di atas latar putih.
+- Kontras teks navy di atas `--binar-blue-50` sekitar 8:1, jadi aman.
 
 **Gradien baru (usulan):** `linear-gradient(262deg, #F8A012 0%, #386BB7 55%, #2A3B8B 100%)`
 
@@ -99,6 +104,29 @@ Design system untuk **Binar Sunnah School**, sekolah TK dan SD Islam berbasis Al
 **Kontras:**
 - Teks putih di atas navy dan teks `#111` di atas amber aman untuk body text.
 - Hindari teks amber di atas putih untuk body text karena kontrasnya rendah. Amber hanya untuk judul besar atau elemen dekoratif.
+
+### 3.4 Aturan kombinasi warna
+
+> 🚫 **Jangan pakai hitam/charcoal dengan amber.**
+> Hitam (`#000`–`#333`) atau charcoal `#1F1F1F` yang dipasangkan dengan amber atau oranye menimbulkan asosiasi yang tidak pantas untuk sekolah Islam anak-anak. Ini berlaku untuk:
+> - panel
+> - tombol
+> - badge
+> - overlay foto
+> - latar poster
+
+| ✅ Pakai | 🚫 Hindari |
+|---|---|
+| Navy + amber (kombinasi utama brand) | Hitam/charcoal + amber/oranye |
+| `--binar-blue-50` + navy (panel sekunder) | Panel charcoal untuk jadwal/info |
+| Putih + navy + aksen amber | Overlay foto hitam di bawah amber |
+| Overlay foto gradien **navy** | Overlay foto gradien hitam |
+
+Kalau butuh panel yang "gelap", pakai **navy**, bukan charcoal.
+
+Aturan lain:
+- Satu kuning saja, yaitu amber `#F8A012`. Jangan campur dengan kuning lemon (`#F9E82A`) atau kuning lain.
+- Hindari merah/coral bersebelahan langsung dengan amber dalam ukuran besar.
 
 ---
 
@@ -191,6 +219,8 @@ Angka besar Sora Light berupa **outline** dengan gradien, dan tanda `+` berwarna
 ### 6.5 Bar info
 Bar merah "Senin – Kamis 7:30 – 11:00 | Jum'at 7:30 – 10:00" berdampingan dengan bar charcoal "Segera hubungi kami".
 
+> Kartu prestasi, kartu event, dan bar kontak di website saat ini memakai charcoal. Untuk materi baru, ganti dengan **navy** atau **`--binar-blue-50`** sesuai aturan di bagian 3.4.
+
 ---
 
 ## 7. Ikonografi
@@ -244,16 +274,54 @@ Hangat, lembut, religius, dan meyakinkan. Ditulis untuk orang tua dengan sapaan 
 
 ---
 
-## 10. Template Instagram (usulan)
+## 10. Template Instagram
 
 Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
+
+### 10.1 Gaya Instagram sebelumnya (referensi: poster Ujian Tahfidz Juz 30)
+- **Latar:** pink pucat `#F5ECEB`, dengan logo di tengah atas.
+- **Kotak:** satu kotak navy `#203B82` dengan radius sangat besar, berisi kartu dalam berwarna pink pucat.
+- **Font:** Poppins Bold dan Bold Italic.
+- **Kuning:** dua sekaligus, yaitu lemon `#F9E82A` (lingkaran di belakang foto, bintang) dan amber `#F9B033` (angka, tombol, bintang).
+- **Foto:** foto santri dengan latar dihapus, keluar dari batas kotak.
+- **Info:** ikon kalender dan lokasi, plus tombol "Live Streaming" berwarna amber.
+
+**Penyesuaian ke design system:**
+- **Font:** Poppins diganti Sora dan Manrope.
+- **Kuning:** cukup amber `#F8A012`, tanpa lemon.
+- **Navy:** pakai navy logo `#2A3B8B`.
+- **Latar:** kanvas `#F0F2F4`.
+- **Layout:** bento dengan kartu ber-radius seragam, mengikuti website.
+
+### 10.2 Template resmi
+
+| Template | Status | Lokasi |
+|---|---|---|
+| **Poster Ujian Tahfidz** | ✅ Siap pakai | [`templates/Poster Ujian Tahfidz/`](./templates/Poster%20Ujian%20Tahfidz/) |
+
+![Poster Ujian Tahfidz](./templates/Poster%20Ujian%20Tahfidz/preview.png)
+
+**Poster Ujian Tahfidz** adalah layout bento dengan empat area:
+- **Header:** logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu.
+- **Kartu foto (kiri):** navy dengan foto santri di tengah dan gradien navy di bawah nama.
+- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**.
+- **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy.
+
+Aturan template ini:
+- Angka besar selalu **solid**, bukan outline.
+- **Tidak ada lingkaran atau bentuk dekoratif** di belakang foto.
+- Logo dan tag sejajar dengan **tepi kartu**, bukan dengan isi kartu.
+- Kartu jadwal **tidak boleh hitam/charcoal** (lihat 3.4).
+- Margin poster 56px, jarak antar kartu 20px, padding kartu 40px, radius kartu 36px.
+
+### 10.3 Template lain (usulan)
 
 | Template | Latar | Isi |
 |---|---|---|
 | **Program / target** | Navy solid | Eyebrow program, judul besar Sora, tag target hafalan, monogram di pojok |
-| **Foto kegiatan** | Foto + overlay gelap bawah | Eyebrow kategori, judul putih, logo putih kecil |
+| **Foto kegiatan** | Foto + overlay gradien navy di bawah | Eyebrow kategori, judul putih, logo putih kecil |
 | **Pengumuman / SPMB** | Amber solid | Judul `#111`, tombol pill navy "Daftar sekarang" |
-| **Event** | Charcoal | Badge tanggal, judul, tag kategori, lokasi |
+| **Event** | Navy atau `--binar-blue-50` | Badge tanggal, judul, tag kategori, lokasi |
 | **Testimoni** | Putih / kanvas | Kutipan Sora 400, nama orang tua, drop cap |
 | **Doa / hadits harian** | Navy + bintang amber | Teks Arab besar, terjemahan Manrope, sumber |
 
@@ -271,6 +339,9 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 | 🔴 Tinggi | Foto AI atau stok yang generik | Ganti dengan dokumentasi asli yang diberi grading seragam |
 | 🟠 Sedang | Placeholder belum diisi: counter "0+", kartu program tanpa gambar, alamat New York di halaman blog | Isi data asli |
 | 🟠 Sedang | Warna ikon di luar palet | Warnai ulang dengan palet brand |
+| 🟠 Sedang | Panel charcoal dipasangkan dengan amber/coral (kartu event, prestasi, bar kontak) | Ganti dengan navy atau `--binar-blue-50` (aturan 3.4) |
+| 🟠 Sedang | Instagram memakai dua kuning (lemon + amber) dan font Poppins | Pakai amber saja, serta Sora dan Manrope |
+| 🔵 Rendah | Typo di poster Instagram: "channel Binar **Sunah**" | "Binar Sunnah" |
 | 🔵 Rendah | 6 keluarga font dimuat, hanya 2 yang dipakai | Hapus Roboto, Roboto Slab, Inter, dan Cardo |
 
 ---
@@ -284,6 +355,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
   --binar-navy: #2A3B8B;
   --binar-amber: #F8A012;
   --binar-blue: #386BB7;
+  --binar-blue-50: #E3EAF5;   /* panel sekunder, tint 14% dari --binar-blue */
   --binar-gradient: linear-gradient(262deg, #F8A012 0%, #386BB7 55%, #2A3B8B 100%);
 
   /* Netral */
@@ -293,7 +365,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
   --line: #DDE1E7;
   --canvas: #F0F2F4;
   --surface: #FFFFFF;
-  --panel-dark: #1F1F1F;
+  --panel-dark: #1F1F1F;      /* hanya footer web, JANGAN dipasangkan dengan amber */
 
   /* Semantik */
   --alert: #E24C4A;
@@ -324,7 +396,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 ```json
 {
   "color": {
-    "brand": { "navy": "#2A3B8B", "amber": "#F8A012", "blue": "#386BB7" },
+    "brand": { "navy": "#2A3B8B", "amber": "#F8A012", "blue": "#386BB7", "blue50": "#E3EAF5" },
     "neutral": {
       "ink": "#111111", "text": "#333333", "muted": "#5D6470", "line": "#DDE1E7",
       "canvas": "#F0F2F4", "surface": "#FFFFFF", "panelDark": "#1F1F1F"
@@ -338,7 +410,10 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
   "fontSize": {
     "display": 120, "h2": 45, "h3": 40, "h4": 30, "body": 16, "button": 14, "tag": 12
   },
-  "radius": { "xs": 5, "sm": 10, "card": 25, "pill": 9999 }
+  "radius": { "xs": 5, "sm": 10, "card": 25, "cardInstagram": 36, "pill": 9999 },
+  "rules": {
+    "forbiddenPairs": [["panelDark", "amber"], ["#000000", "amber"]]
+  }
 }
 ```
 

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Poster Ujian Tahfidz · Binar Sunnah School</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================
+   Poster Ujian Tahfidz: template Instagram feed 1080×1350 (4:5)
+   Bagian dari Design System Binar (lihat ../../Design System Binar.md)
+   Layout: bento, yaitu header (logo + tag), kartu foto navy di kiri,
+           kartu info putih di kanan atas, kartu jadwal biru muda di kanan bawah.
+   ============================================================ */
+:root{
+  /* Token brand */
+  --binar-navy:#2A3B8B;
+  --binar-amber:#F8A012;
+  --binar-blue:#386BB7;
+  --binar-blue-50:#E3EAF5;   /* tint 14% dari --binar-blue: panel sekunder */
+  /* Netral */
+  --ink:#111111; --text:#333333; --muted:#5D6470; --line:#DDE1E7;
+  --canvas:#F0F2F4; --surface:#FFFFFF;
+  /* Tipografi */
+  --font-display:"Sora",Arial,Helvetica,sans-serif;
+  --font-body:"Manrope",Arial,Helvetica,sans-serif;
+  --tracking-display:-0.03em;
+  /* Bentuk */
+  --radius-card:36px;   /* skala IG dari --radius-card web 25px */
+  --radius-badge:10px;
+  --radius-pill:9999px;
+  /* Layout */
+  --margin:56px; --gap:20px; --pad:40px;
+}
+*{box-sizing:border-box;margin:0}
+body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-content:center;padding:24px}
+.poster{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--canvas);
+  padding:var(--margin);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto;gap:var(--gap)}
+
+/* Header: logo sejajar tepi kiri box, tag sejajar tepi kanan box */
+.top{grid-column:1/3;display:flex;justify-content:space-between;align-items:center;height:84px}
+.top img{height:80px;display:block}
+.tags{display:flex;gap:10px;flex-wrap:wrap}
+.tag{border:1.5px solid var(--line);border-radius:var(--radius-pill);padding:8px 20px;font-size:22px;font-weight:500;color:var(--text);background:var(--surface)}
+
+/* Kartu foto */
+.photo{grid-row:2/4;background:var(--binar-navy);border-radius:var(--radius-card);position:relative;overflow:hidden}
+.photo .person{position:absolute;bottom:0;left:50%;height:82%;transform:translateX(calc(-1 * var(--face-x,50%)))}
+.photo .placeholder{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:78%;opacity:.25}
+.photo::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(42,59,139,.92))}
+.star{position:absolute;width:var(--s);height:var(--s);background:var(--c,var(--binar-amber));
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.name{position:absolute;left:var(--pad);right:var(--pad);bottom:var(--pad);color:#fff;z-index:2}
+.name small{display:block;font-size:20px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:6px;font-weight:600}
+.name b{font-family:var(--font-display);font-weight:600;font-size:64px;letter-spacing:var(--tracking-display);line-height:1}
+
+/* Kartu info */
+.info{background:var(--surface);border-radius:var(--radius-card);padding:44px var(--pad);display:flex;flex-direction:column;gap:22px}
+.eyebrow{font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-family:var(--font-display);font-weight:400;font-size:76px;line-height:.98;letter-spacing:var(--tracking-display);color:var(--ink)}
+.juz{display:flex;align-items:flex-end;gap:14px;margin-top:4px}
+.juz span{font-family:var(--font-display);font-size:34px;color:var(--binar-navy);font-weight:600;padding-bottom:22px}
+.juz b{font-family:var(--font-display);font-weight:600;font-size:200px;line-height:.8;letter-spacing:-.05em;color:var(--binar-amber)}
+.info .tags{margin-top:auto}
+
+/* Kartu jadwal: biru muda, BUKAN hitam/charcoal */
+.schedule{background:var(--binar-blue-50);border-radius:var(--radius-card);padding:36px var(--pad);display:flex;flex-direction:column;gap:22px;color:var(--text)}
+.row{display:flex;gap:18px;align-items:center}
+.badge{background:var(--binar-navy);color:#fff;border-radius:var(--radius-badge);padding:10px 16px;display:flex;flex-direction:column;line-height:1;font-family:var(--font-display);min-width:96px}
+.badge small{font-size:18px;font-weight:600;color:var(--binar-amber)}
+.badge b{font-size:56px;font-weight:600;letter-spacing:var(--tracking-display)}
+.when{font-size:26px;line-height:1.45}
+.when b{font-weight:700;color:var(--binar-navy)}
+.place{font-size:22px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;border-radius:var(--radius-pill);background:var(--binar-navy);color:#fff;padding:16px 28px;font-size:24px;font-weight:500}
+.yt{width:34px;height:24px;background:#FF0000;border-radius:7px;position:relative;flex:none}
+.yt::after{content:"";position:absolute;left:13px;top:6px;border-left:11px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ISI POSTER: ubah nilai di bawah ini saja.
+     foto      : PNG transparan (latar sudah dihapus), taruh di folder ini.
+     wajahX    : posisi tengah wajah dalam foto (persen dari kiri),
+                 supaya wajah berada di tengah kartu. Default 50%.
+     ============================================================ -->
+<script>
+const DATA = {
+  nama:        "Nama Santri",
+  judul:       "Setoran akhir hafalan",
+  juz:         "30",
+  tagHeader:   ["Tahfidz", "SD Islam"],
+  tagInfo:     ["37 surat", "An-Naba' – An-Nas"],
+  hari:        "Jum'at",
+  bulanTahun:  "Nov / 26",
+  tanggal:     "20",
+  jam:         "07.30 WIB – selesai",
+  tempat:      "Binar Sunnah School, Petukangan Selatan",
+  tombol:      "Live di YouTube Binar Sunnah",
+  foto:        "foto.png",
+  wajahX:      "50%"
+};
+</script>
+
+<div class="poster" id="poster">
+  <header class="top">
+    <img src="logo.png" alt="Binar Sunnah School">
+    <div class="tags" data-list="tagHeader"></div>
+  </header>
+
+  <div class="photo" style="--face-x:50%">
+    <div class="star" style="--s:90px;left:40px;top:44px"></div>
+    <div class="star" style="--s:44px;left:140px;top:130px;--c:#fff;opacity:.6"></div>
+    <svg class="placeholder" viewBox="0 0 200 220" aria-hidden="true"><circle cx="100" cy="70" r="48" fill="#fff"/><path d="M10 220c0-60 40-95 90-95s90 35 90 95z" fill="#fff"/></svg>
+    <img class="person" alt="">
+    <div class="name"><small>Peserta ujian</small><b data-f="nama"></b></div>
+  </div>
+
+  <section class="info">
+    <span class="eyebrow">Ujian Tahfidz</span>
+    <h1 data-f="judul"></h1>
+    <div class="juz"><span>Juz</span><b data-f="juz"></b></div>
+    <div class="tags" data-list="tagInfo"></div>
+  </section>
+
+  <section class="schedule">
+    <div class="row">
+      <div class="badge"><small data-f="bulanTahun"></small><b data-f="tanggal"></b></div>
+      <div class="when"><span data-f="hari"></span><br><b data-f="jam"></b></div>
+    </div>
+    <div class="place" data-f="tempat"></div>
+    <span class="btn"><span class="yt"></span><span data-f="tombol"></span> <span>›</span></span>
+  </section>
+</div>
+
+<script>
+document.querySelectorAll('[data-f]').forEach(el => el.textContent = DATA[el.dataset.f] ?? '');
+document.querySelectorAll('[data-list]').forEach(el => {
+  (DATA[el.dataset.list] || []).forEach(t => {
+    const s = document.createElement('span'); s.className = 'tag'; s.textContent = t; el.appendChild(s);
+  });
+});
+const card = document.querySelector('.photo');
+card.style.setProperty('--face-x', DATA.wajahX || '50%');
+const img = card.querySelector('.person');
+img.onload = () => card.querySelector('.placeholder').remove();
+img.onerror = () => img.remove();
+img.src = DATA.foto;
+</script>
+</body>
+</html>
