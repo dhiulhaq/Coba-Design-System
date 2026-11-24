@@ -96,7 +96,7 @@ Setiap aturan baru yang disepakati dicatat di dokumen ini **dan** di `SKILL.md`.
 | Token | Hex | Peran |
 |---|---|---|
 | `--binar-navy` | `#2A3B8B` | **Primer**: judul penting, tombol solid, latar post |
-| `--binar-amber` | `#F8A012` | **Aksen**: bintang, highlight, angka statistik |
+| `--binar-amber` | `#F8A012` | **Aksen**: bintang, angka besar (juz, statistik) |
 | `--binar-blue` | `#386BB7` | **Sekunder**: link, ujung gradien |
 | `--binar-blue-50` | `#E3EAF5` | **Panel sekunder**: kartu jadwal/info, latar tag. Tint 14% dari `--binar-blue` |
 | `--ink` | `#111111` | Heading |
@@ -220,15 +220,14 @@ Pola label: kata kerja ajakan, misalnya "Temukan program kami", "Unduh PDF", "Li
 | Varian | Spesifikasi | Pemakaian |
 |---|---|---|
 | **Netral** | Pill putih, border `--line` 1.5px, teks `--text` Manrope 500 | Kategori, label umum (misalnya "Tahfidz", "SD Islam") |
-| **Highlight** | Pill `--binar-amber`, teks **putih** Manrope 700 | Data yang ingin ditonjolkan: target juz, jumlah surat, nama surat |
+| **Highlight** | Pill `--binar-navy`, teks **putih** Manrope 600 | Data pendukung yang ingin ditonjolkan: jumlah halaman, jumlah surat, nama surat |
 
 **Aturan tag highlight:**
-- Di atas amber, teks **putih**, tidak pernah hitam (aturan 3.4).
-- Kontras putih di atas amber hanya sekitar 2.1:1, jadi:
-  - pakai weight 700
-  - ukuran minimal 22px di poster 1080px
-  - isinya hanya label pendek (1–4 kata), jangan kalimat atau info penting yang wajib terbaca
-- Tidak ada warna oranye tambahan. Tag highlight memakai amber brand yang sama dengan angka besar, supaya jumlah warna di desain tetap sedikit.
+- **Amber hanya untuk satu fokus**, yaitu angka besar (juz, statistik). Tag di sekitarnya memakai **navy**, supaya angka tetap jadi pusat perhatian dan tag terbaca sebagai info pendukung.
+- Kontras putih di atas navy sekitar 10:1, jadi aman untuk ukuran apa pun.
+- Isinya tetap label pendek (1–4 kata).
+
+*Riwayat: tag highlight sempat memakai amber dengan teks putih. Diganti ke navy karena pill amber menyatu dengan angka juz dan kontrasnya rendah (2.1:1).*
 
 Pill outline tipis, teks 11–12px. Isinya **target konkret** program, misalnya `100 Doa Harian` · `50 Hadits` · `Target Juz 30` · `25 Hadits` · `Target 15 Surat Pendek`. Di kartu event, tag dipakai untuk kategori, misalnya `akhlak` · `tarbiyah` · `kompetisi`.
 
@@ -352,7 +351,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 **Poster Ujian Tahfidz** adalah layout bento dengan empat area:
 - **Header:** logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu.
 - **Kartu foto (kiri):** navy dengan foto santri di tengah dan gradien navy di bawah nama.
-- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Angka dan tag highlight (jumlah dan nama surat, amber dengan teks putih) dikelompokkan di bagian bawah kartu dengan jarak 28px.
+- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Angka dan tag highlight (jumlah halaman/surat dan nama surat, **navy** dengan teks putih) dikelompokkan di bagian bawah kartu dengan jarak 28px.
 - **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy dengan **ikon YouTube resmi** (lihat 7.1).
 
 Aturan template ini:
