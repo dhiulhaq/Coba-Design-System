@@ -76,11 +76,13 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 | Poster Ujian Tahfidz | `docs/binar-sunnah-school/templates/Poster Ujian Tahfidz/` | 1080×1350 |
 | Poster Kajian | `docs/binar-sunnah-school/templates/Poster Kajian/` | 1080×1350 |
 | Poster Event | `docs/binar-sunnah-school/templates/Poster Event/` | 1080×1350 |
+| Rundown Acara | `docs/binar-sunnah-school/templates/Rundown Acara/` | 1080×1350 |
 
 **Memilih template:**
 - Ujian, setoran, atau prestasi santri (fokus ke foto anak) → **Poster Ujian Tahfidz**.
 - Kajian, seminar, atau acara orang tua (fokus ke judul dan pemateri) → **Poster Kajian**. Pada template ini amber hanya dipakai untuk angka tanggal.
 - Acara sekolah dengan foto ilustrasi (edukasi alam, field trip, lomba, bazar), dengan **waktu dan tempat** sebagai info terpenting → **Poster Event**. Waktu dan tempat harus selalu jadi kartu terbesar setelah hero.
+- Susunan acara atau jadwal kegiatan dalam satu hari (pasangan Poster Event) → **Rundown Acara**. Maksimal 10 baris, agenda sejenis digabung (misalnya beberapa sambutan jadi "Sambutan-sambutan"), dan hanya 2–4 baris inti acara yang disorot.
 
 **Cara pakai Poster Ujian Tahfidz:**
 1. Isi objek `DATA` di file HTML.
