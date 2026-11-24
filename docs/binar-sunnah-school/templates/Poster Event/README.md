@@ -18,7 +18,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
 | `preview.png` | Contoh tampilan tanpa foto (placeholder). |
 
 ## Cara pakai
-1. Siapkan **foto ilustrasi acara** (JPG/PNG, minimal lebar 1000px), simpan sebagai `foto-acara.jpg` di folder ini. Foto akan memudar ke navy dari kiri, jadi subjek foto sebaiknya berada di sisi kanan.
+1. Siapkan **foto ilustrasi acara** (JPG/PNG, minimal lebar 1000px), simpan sebagai `foto-acara.jpg` di folder ini, lalu isi `foto: "foto-acara.jpg"`. Selama `foto` kosong, area foto menampilkan placeholder "Foto acara". Foto akan memudar ke navy dari kiri, jadi subjek foto sebaiknya berada di sisi kanan.
 2. Ubah objek `DATA`:
    - **Judul:** `eyebrow`, `judul`, `sub`
    - **Foto:** `foto`, `fotoPosisi` (misalnya `"center"`, `"right top"`, `"60% 40%"`)
