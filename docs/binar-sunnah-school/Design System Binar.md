@@ -247,6 +247,24 @@ Bar merah "Senin – Kamis 7:30 – 11:00 | Jum'at 7:30 – 10:00" berdampingan 
 - ⚠️ Warna isiannya (hijau, pink, kuning, cokelat) di luar palet brand.
 - **Usulan:** pertahankan gaya garisnya, tapi batasi isian ke navy, amber, biru muda, dan satu netral hangat. Bintang empat sudut dari logo bisa dipakai sebagai ornamen.
 
+### 7.1 Logo platform pihak ketiga (YouTube, Instagram, WhatsApp, dll.)
+
+Logo platform **selalu memakai file resmi** dari pemiliknya. Logo ini tidak ikut aturan warna Binar.
+
+| Aturan | Detail |
+|---|---|
+| Pakai file resmi | Jangan menggambar ulang dengan CSS atau shape sendiri. Simpan file aslinya, PNG transparan atau SVG. |
+| Warna asli | Ikon YouTube tetap merah `#FF0000` dengan segitiga putih. Jangan diubah ke navy atau amber. |
+| Proporsi | Jangan di-stretch, dipotong, atau diberi efek (bayangan, outline, gradien). |
+| Ukuran | Di tombol pill poster 1080px, tinggi ikon **26px**, dengan jarak 12px ke teks. |
+| Latar | Taruh di latar yang kontras dan polos. Di tombol navy, ikon YouTube merah terbaca dengan jelas. |
+| Penulisan nama | "YouTube" (Y dan T kapital), "Instagram", "WhatsApp". |
+
+**File yang tersedia:**
+- `templates/Poster Ujian Tahfidz/youtube-icon.png`: ikon YouTube resmi, 240×168px, latar transparan.
+
+Ikon resmi pernah dibuat ulang dengan CSS di versi awal template. Hasilnya bentuknya tidak persis, jadi sekarang diganti dengan file resmi.
+
 ---
 
 ## 8. Fotografi
@@ -321,7 +339,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 - **Header:** logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu.
 - **Kartu foto (kiri):** navy dengan foto santri di tengah dan gradien navy di bawah nama.
 - **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Angka dan tag highlight (jumlah dan nama surat, amber dengan teks putih) dikelompokkan di bagian bawah kartu dengan jarak 28px.
-- **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy.
+- **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy dengan **ikon YouTube resmi** (lihat 7.1).
 
 Aturan template ini:
 - Angka besar selalu **solid**, bukan outline.

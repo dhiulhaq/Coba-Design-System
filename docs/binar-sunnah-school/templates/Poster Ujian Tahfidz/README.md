@@ -9,6 +9,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman ujian tahfidz sant
 |---|---|
 | `Poster Ujian Tahfidz.html` | Template. Semua teks diisi dari objek `DATA` di bagian atas file. |
 | `logo.png` | Logo Binar Sunnah School (navy + amber). |
+| `youtube-icon.png` | Ikon YouTube resmi (merah `#FF0000` + segitiga putih, latar transparan). |
 | `export.js` | Ekspor ke PNG 1080×1350. |
 | `preview.png` | Contoh tampilan tanpa foto. |
 
@@ -42,3 +43,4 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman ujian tahfidz sant
 - Kartu jadwal memakai **biru muda `--binar-blue-50`**. **Jangan pakai hitam atau charcoal bersama amber.**
 - Logo dan tag sejajar dengan **tepi kartu**, bukan dengan isi kartu.
 - Tidak ada lingkaran atau bentuk dekoratif di belakang foto. Cukup latar navy dan bintang.
+- Tombol live streaming memakai **ikon YouTube resmi** (`youtube-icon.png`) setinggi 26px. Jangan menggambar ulang atau mewarnai ulang ikonnya.
