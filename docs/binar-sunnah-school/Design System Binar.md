@@ -397,8 +397,7 @@ Aturan template ini:
 - **Header:** logo di kiri, tag netral "Terbuka untuk umum" di kanan.
 - **Hero navy selebar poster, isinya rata kiri:**
   - nama seri dalam huruf kapital berjarak, diikuti garis tipis
-  - pill kategori outline putih
-  - judul Sora 400 78px, maksimal 3 baris
+  - pill kategori outline putih dan judul Sora 400 78px (maksimal 3 baris), sebagai satu kelompok yang **berada di tengah secara vertikal**: jarak dari label seri ke pill sama dengan jarak dari judul ke garis pemateri
   - garis pemisah, lalu pemateri: avatar atau ikon mikrofon, nama Sora 600, gelar Arab (Noto Naskh Arabic), dan peran
   - ornamen (lihat 7.0):
     - bintang amber besar yang terpotong di pojok kanan atas, dengan 2 orbit putus-putus

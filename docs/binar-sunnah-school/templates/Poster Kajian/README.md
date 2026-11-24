@@ -31,7 +31,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk pengumuman kajian, misalnya s
 | Area | Isi | Token |
 |---|---|---|
 | Header | Logo sejajar tepi kiri kartu, tag netral "Terbuka untuk umum" sejajar tepi kanan | `--margin: 56px` |
-| Hero (navy, selebar poster, rata kiri) | Seri diikuti garis tipis, pill kategori outline putih, judul Sora 400 78px, garis pemisah, pemateri (avatar/ikon, nama Sora 600 + gelar Arab, peran). Ornamen: bintang amber besar dengan 2 orbit putus-putus, bintang kecil, dan pola bintang samar. | `--binar-navy`, `--radius-card: 36px` |
+| Hero (navy, selebar poster, rata kiri) | Seri diikuti garis tipis di atas. Pill kategori outline putih dan judul Sora 400 78px berada di **tengah vertikal**, dengan jarak ke seri dan ke pemateri sama. Lalu garis pemisah, pemateri (avatar/ikon, nama Sora 600 + gelar Arab, peran). Ornamen: bintang amber besar dengan 2 orbit putus-putus, bintang kecil, dan pola bintang samar. | `--binar-navy`, `--radius-card: 36px` |
 | Kartu tanggal (putih) | Ikon kalender + hari, **angka tanggal besar solid amber**, bulan dan tahun, jam | `--surface`, `--binar-amber` |
 | Kartu lokasi (biru muda) | Ikon pin + label, nama tempat Sora 600 navy, alamat | `--binar-blue-50` |
 | Kartu QR (putih) | QR navy dan label "Buka Maps ›" | `--surface` |
