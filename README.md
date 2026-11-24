@@ -22,7 +22,8 @@ Repo eksperimen untuk membangun **design system dan materi visual** dengan bantu
 │   ├── brand-audit.html                   # Audit visual brand (halaman HTML)
 │   └── templates/
 │       ├── Poster Ujian Tahfidz/          # Template Instagram 1080×1350
-│       └── Poster Kajian/                 # Template Instagram 1080×1350
+│       ├── Poster Kajian/                 # Template Instagram 1080×1350
+│       └── Poster Event/                  # Template Instagram 1080×1350
 ├── assets/banners/1212-cheesecake/        # Contoh banner (3 art direction)
 └── skills-lock.json                       # Versi skill pihak ketiga
 ```
@@ -62,6 +63,7 @@ Dokumentasi lengkap ada di [`docs/binar-sunnah-school/Design System Binar.md`](d
 |---|---|---|
 | Poster Ujian Tahfidz | 1080×1350 | [`templates/Poster Ujian Tahfidz`](docs/binar-sunnah-school/templates/Poster%20Ujian%20Tahfidz/) |
 | Poster Kajian | 1080×1350 | [`templates/Poster Kajian`](docs/binar-sunnah-school/templates/Poster%20Kajian/) |
+| Poster Event | 1080×1350 | [`templates/Poster Event`](docs/binar-sunnah-school/templates/Poster%20Event/) |
 
 Untuk membuat poster:
 1. Isi objek `DATA` di file HTML template.

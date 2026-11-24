@@ -1,0 +1,6 @@
+# Foto acara dan hasil ekspor tidak di-commit
+foto*.png
+foto*.jpg
+foto*.jpeg
+foto*.webp
+poster*.png
