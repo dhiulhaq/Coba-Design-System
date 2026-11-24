@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Poster Event · Binar Sunnah School</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500&display=swap">
+<style>
+/* ============================================================
+   Poster Event: template Instagram feed 1080×1350 (4:5)
+   Bagian dari Design System Binar (lihat ../../Design System Binar.md)
+   Prioritas: 1) WAKTU & TEMPAT  2) foto/judul  3) materi  4) ayat
+   Layout: header, hero navy dengan foto ilustrasi di kanan,
+           baris "waktu & tempat" (dua kartu terbesar),
+           kartu "apa yang dipelajari" (maks 4), lalu ayat (opsional).
+   ============================================================ */
+:root{
+  --binar-navy:#2A3B8B; --binar-amber:#F8A012; --binar-blue:#386BB7; --binar-blue-50:#E3EAF5;
+  --binar-overlay:rgba(42,59,139,.92);
+  --ink:#111111; --text:#333333; --muted:#5D6470; --line:#DDE1E7;
+  --canvas:#F0F2F4; --surface:#FFFFFF;
+  --font-display:"Sora",Arial,Helvetica,sans-serif;
+  --font-body:"Manrope",Arial,Helvetica,sans-serif;
+  --font-arabic:"Noto Naskh Arabic","Amiri",serif;
+  --tracking-display:-0.03em;
+  --radius-card:36px; --radius-badge:10px; --radius-pill:9999px;
+  --margin:56px; --gap:20px; --pad:40px;
+  --star:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+}
+*{box-sizing:border-box;margin:0}
+body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-content:center;padding:24px}
+.poster{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--canvas);
+  padding:var(--margin);display:flex;flex-direction:column;gap:var(--gap)}
+
+/* Header */
+.top{display:flex;justify-content:space-between;align-items:center;height:84px;flex:none}
+.top img{height:80px;display:block}
+.tags{display:flex;gap:10px}
+.tag{border:1.5px solid var(--line);border-radius:var(--radius-pill);padding:15px 20px;text-box:trim-both cap alphabetic;font-size:22px;font-weight:500;color:var(--text);background:var(--surface)}
+
+/* Hero: navy + foto ilustrasi di kanan (memudar ke navy) */
+.hero{flex:1;min-height:0;background:var(--binar-navy);border-radius:var(--radius-card);position:relative;overflow:hidden;color:#fff;
+  padding:44px var(--pad);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.photo{position:absolute;top:0;right:0;bottom:0;width:58%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 38%);mask-image:linear-gradient(to right,transparent 0%,#000 38%)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:var(--foto-pos,center);display:block}
+/* Placeholder kalau foto belum diisi */
+.photo.empty{background:rgba(255,255,255,.06)}
+.photo.empty::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 22l2.2 7.8L42 32l-7.8 2.2L32 42l-2.2-7.8L22 32l7.8-2.2z' fill='%23fff'/%3E%3C/svg%3E");background-size:48px 48px;opacity:.14}
+.photo.empty .ph{position:absolute;right:120px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:20px;font-weight:600;opacity:.7}
+.photo.empty .ph svg{width:72px;height:72px}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(42,59,139,.55),transparent 45%)}
+.star{position:absolute;width:var(--s);height:var(--s);background:var(--c,var(--binar-amber));clip-path:var(--star)}
+.eyebrow{font-size:20px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.75;display:flex;align-items:center;gap:16px;position:relative}
+.eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor;opacity:.6}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:88px;line-height:.98;letter-spacing:var(--tracking-display);max-width:520px;position:relative}
+.sub{font-size:26px;line-height:1.4;max-width:400px;opacity:.85;position:relative}
+
+/* Waktu & tempat: elemen terpenting */
+.when-where{flex:none;display:grid;grid-template-columns:1fr 1.15fr;gap:var(--gap)}
+.card{border-radius:var(--radius-card);padding:32px 36px;display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;overflow:hidden}
+.label{font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:10px;position:relative}
+.label svg{width:24px;height:24px;flex:none}
+.when{background:var(--surface)}
+.when::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:var(--binar-blue-50);clip-path:var(--star)}
+.date{display:flex;align-items:center;gap:20px;position:relative}
+.date .num{font-family:var(--font-display);font-weight:600;font-size:132px;line-height:.8;letter-spacing:-.05em;color:var(--binar-amber)}
+.date .day{font-family:var(--font-display);font-weight:600;font-size:34px;color:var(--binar-navy);letter-spacing:var(--tracking-display);line-height:1.1}
+.date .my{font-size:24px;color:var(--text);margin-top:4px}
+.time{align-self:flex-start;background:var(--binar-navy);color:#fff;border-radius:var(--radius-pill);padding:16px 24px;font-family:var(--font-display);font-weight:600;font-size:28px;letter-spacing:-.01em;text-box:trim-both cap alphabetic;margin-top:6px;position:relative}
+.where{background:var(--binar-blue-50)}
+.where::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 22l2.2 7.8L42 32l-7.8 2.2L32 42l-2.2-7.8L22 32l7.8-2.2z' fill='%232A3B8B'/%3E%3C/svg%3E");background-size:40px 40px;opacity:.12;
+  -webkit-mask-image:radial-gradient(circle at 100% 100%,#000 0%,transparent 60%);mask-image:radial-gradient(circle at 100% 100%,#000 0%,transparent 60%)}
+.where>*{position:relative}
+.place{font-family:var(--font-display);font-weight:600;font-size:46px;line-height:1.05;letter-spacing:var(--tracking-display);color:var(--binar-navy)}
+.addr{font-size:22px;line-height:1.5;color:var(--text)}
+
+/* Apa yang dipelajari */
+.learn{flex:none;background:var(--surface);border-radius:var(--radius-card);padding:28px 32px 30px}
+.learn .label{margin-bottom:18px}
+.items{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:24px}
+.item{display:flex;flex-direction:column;gap:10px;min-width:0}
+.ic{width:60px;height:60px;border-radius:50%;background:var(--binar-blue-50);display:flex;align-items:center;justify-content:center}
+.ic svg{width:30px;height:30px}
+.item b{font-size:20px;font-weight:700;color:var(--binar-navy);line-height:1.25}
+.item span{font-size:18px;line-height:1.4;color:var(--muted)}
+
+/* Ayat (opsional) */
+.ayat{flex:none;display:flex;flex-direction:column;gap:8px;padding:0 8px}
+.ayat .ar{font-family:var(--font-arabic);font-size:32px;line-height:1.7;color:var(--binar-navy);text-align:right}
+.ayat .tr{font-size:18px;line-height:1.5;color:var(--text)}
+.ayat .src{font-weight:700;color:var(--binar-navy)}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ISI POSTER: ubah nilai di bawah ini saja.
+     foto      : foto ilustrasi acara (JPG/PNG), taruh di folder ini.
+                 fotoPosisi mengatur bagian foto yang terlihat (CSS object-position).
+     materi    : 2–4 butir. ikon: "hewan", "cari", "daun", "kitab", "bintang", "orang".
+     ayat      : opsional. Kosongkan arab ("") untuk menyembunyikan.
+     ============================================================ -->
+<script>
+const DATA = {
+  tagHeader:  ["Event", "SD Islam"],
+  eyebrow:    "Belajar di alam",
+  judul:      "Edukasi Reptil",
+  sub:        "Belajar mengenal ciptaan Allah di alam sekitar",
+  foto:       "foto-acara.jpg",
+  fotoPosisi: "center",
+  hari:       "Kamis",
+  tanggal:    "22",
+  bulanTahun: "Oktober 2026",
+  jam:        "08.00 WIB – selesai",
+  tempat:     "Binar Sunnah School",
+  alamat:     "Kompleks Masjid MHT, Jl. H. Nirin No. 63, Petukangan Selatan, Jakarta Selatan",
+  judulMateri:"Apa yang dipelajari?",
+  materi: [
+    { ikon: "hewan",   judul: "Mengenal jenis reptil",  ket: "Ciri-ciri dan habitatnya" },
+    { ikon: "cari",    judul: "Mengamati langsung",     ket: "Perilaku ciptaan Allah di alam" },
+    { ikon: "daun",    judul: "Mengambil hikmah",       ket: "Dari ciptaan Allah di alam semesta" },
+    { ikon: "kitab",   judul: "Menguatkan iman",        ket: "Melalui tadabbur alam" }
+  ],
+  ayat: {
+    arab:  "وَمَا مِنْ دَابَّةٍ فِي الْأَرْضِ وَلَا طَائِرٍ يَطِيرُ بِجَنَاحَيْهِ إِلَّا أُمَمٌ أَمْثَالُكُمْ",
+    arti:  "Tidak ada seekor hewan pun di bumi dan burung-burung yang terbang dengan kedua sayapnya, melainkan semuanya merupakan umat (juga) seperti kamu.",
+    sumber:"QS. Al-An'am: 38"
+  }
+};
+</script>
+
+<div class="poster" id="poster">
+  <header class="top">
+    <img src="logo.png" alt="Binar Sunnah School">
+    <div class="tags" id="tags"></div>
+  </header>
+
+  <section class="hero">
+    <div class="photo" id="photo"><img alt=""></div>
+    <div class="star" style="--s:46px;left:470px;top:46px"></div>
+    <div class="star" style="--s:26px;left:540px;top:120px;--c:#fff;opacity:.5"></div>
+    <div class="eyebrow" data-f="eyebrow"></div>
+    <h1 data-f="judul"></h1>
+    <p class="sub" data-f="sub"></p>
+  </section>
+
+  <section class="when-where">
+    <div class="card when">
+      <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="#2A3B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Waktu</span>
+      <div class="date">
+        <div class="num" data-f="tanggal"></div>
+        <div><div class="day" data-f="hari"></div><div class="my" data-f="bulanTahun"></div></div>
+      </div>
+      <div class="time" data-f="jam"></div>
+    </div>
+    <div class="card where">
+      <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="#2A3B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tempat</span>
+      <div class="place" data-f="tempat"></div>
+      <div class="addr" data-f="alamat"></div>
+    </div>
+  </section>
+
+  <section class="learn">
+    <span class="label"><svg viewBox="0 0 24 24" fill="none" stroke="#2A3B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z"/></svg><span data-f="judulMateri"></span></span>
+    <div class="items" id="items"></div>
+  </section>
+
+  <section class="ayat" id="ayat">
+    <p class="ar" lang="ar" dir="rtl" id="ayat-ar"></p>
+    <p class="tr"><span id="ayat-tr"></span> <span class="src" id="ayat-src"></span></p>
+  </section>
+</div>
+
+<script>
+const ICON = {
+  hewan:  '<circle cx="7" cy="9" r="1.8"/><circle cx="11" cy="5.5" r="1.8"/><circle cx="15.5" cy="6.5" r="1.8"/><circle cx="18.5" cy="10.5" r="1.8"/><path d="M8.5 17.5c0-3 2-5.5 4.5-5.5s4 2.2 4 4.5-1.6 3.5-3.5 3.5c-1.2 0-1.8-.6-2.8-.6s-1.4.6-2.2.6c-.9 0-1.5-.9-1.5-2.5z"/>',
+  cari:   '<circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/>',
+  daun:   '<path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15z"/><path d="M5 19c3-4 6-7 10-9"/>',
+  kitab:  '<path d="M12 7c-2.5-1.6-5.5-2-9-1.6v12.4c3.5-.4 6.5 0 9 1.6 2.5-1.6 5.5-2 9-1.6V5.4C17.5 5 14.5 5.4 12 7z"/><path d="M12 7v12.4"/>',
+  bintang:'<path d="M12 3l1.9 6.1L20 11l-6.1 1.9L12 19l-1.9-6.1L4 11l6.1-1.9z"/>',
+  orang:  '<circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.3"/><path d="M15.5 14.2c2.6-.3 4.5 1.2 5 4"/>'
+};
+const $ = id => document.getElementById(id);
+document.querySelectorAll('[data-f]').forEach(el => el.textContent = DATA[el.dataset.f] ?? '');
+DATA.tagHeader.forEach(t => { const s = document.createElement('span'); s.className = 'tag'; s.textContent = t; $('tags').appendChild(s); });
+
+const photo = $('photo'), img = photo.querySelector('img');
+photo.style.setProperty('--foto-pos', DATA.fotoPosisi || 'center');
+img.onerror = () => { photo.classList.add('empty'); img.remove(); photo.insertAdjacentHTML('beforeend', '<div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-8 8"/></svg>Foto acara</div>'); };
+img.src = DATA.foto;
+
+const items = DATA.materi.slice(0, 4);
+$('items').style.setProperty('--n', items.length);
+items.forEach(m => {
+  const d = document.createElement('div'); d.className = 'item';
+  d.innerHTML = '<div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2A3B8B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[m.ikon] || ICON.bintang) + '</svg></div><b></b><span></span>';
+  d.querySelector('b').textContent = m.judul; d.querySelector('span').textContent = m.ket;
+  $('items').appendChild(d);
+});
+
+if (DATA.ayat && DATA.ayat.arab) {
+  $('ayat-ar').textContent = DATA.ayat.arab;
+  $('ayat-tr').textContent = '“' + DATA.ayat.arti + '”';
+  $('ayat-src').textContent = '(' + DATA.ayat.sumber + ')';
+} else { $('ayat').remove(); }
+</script>
+</body>
+</html>
