@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <title>Poster Event · Binar Sunnah School</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
 /* ============================================================
    Poster Event: template Instagram feed 1080×1350 (4:5)
    Bagian dari Design System Binar (lihat ../../Design System Binar.md)
-   Prioritas: 1) WAKTU & TEMPAT  2) foto/judul  3) materi  4) ayat
+   Prioritas: 1) WAKTU & TEMPAT  2) foto/judul  3) materi
    Layout: header, hero navy dengan foto ilustrasi di kanan,
            baris "waktu & tempat" (dua kartu terbesar),
-           kartu "apa yang dipelajari" (maks 4), lalu ayat (opsional).
+           lalu kartu "apa yang dipelajari" (maks 4).
    ============================================================ */
 :root{
   --binar-navy:#2A3B8B; --binar-amber:#F8A012; --binar-blue:#386BB7; --binar-blue-50:#E3EAF5;
@@ -20,7 +20,6 @@
   --canvas:#F0F2F4; --surface:#FFFFFF;
   --font-display:"Sora",Arial,Helvetica,sans-serif;
   --font-body:"Manrope",Arial,Helvetica,sans-serif;
-  --font-arabic:"Noto Naskh Arabic","Amiri",serif;
   --tracking-display:-0.03em;
   --radius-card:36px; --radius-badge:10px; --radius-pill:9999px;
   --margin:56px; --gap:20px; --pad:40px;
@@ -84,11 +83,6 @@ body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-conten
 .item b{font-size:20px;font-weight:700;color:var(--binar-navy);line-height:1.25}
 .item span{font-size:18px;line-height:1.4;color:var(--muted)}
 
-/* Ayat (opsional) */
-.ayat{flex:none;display:flex;flex-direction:column;gap:8px;padding:0 8px}
-.ayat .ar{font-family:var(--font-arabic);font-size:32px;line-height:1.7;color:var(--binar-navy);text-align:right}
-.ayat .tr{font-size:18px;line-height:1.5;color:var(--text)}
-.ayat .src{font-weight:700;color:var(--binar-navy)}
 </style>
 </head>
 <body>
@@ -98,7 +92,6 @@ body{background:#d9dce1;font-family:var(--font-body);display:flex;justify-conten
      foto      : foto ilustrasi acara (JPG/PNG), taruh di folder ini.
                  fotoPosisi mengatur bagian foto yang terlihat (CSS object-position).
      materi    : 2–4 butir. ikon: "hewan", "cari", "daun", "kitab", "bintang", "orang".
-     ayat      : opsional. Kosongkan arab ("") untuk menyembunyikan.
      ============================================================ -->
 <script>
 const DATA = {
@@ -120,12 +113,7 @@ const DATA = {
     { ikon: "cari",    judul: "Mengamati langsung",     ket: "Perilaku ciptaan Allah di alam" },
     { ikon: "daun",    judul: "Mengambil hikmah",       ket: "Dari ciptaan Allah di alam semesta" },
     { ikon: "kitab",   judul: "Menguatkan iman",        ket: "Melalui tadabbur alam" }
-  ],
-  ayat: {
-    arab:  "وَمَا مِنْ دَابَّةٍ فِي الْأَرْضِ وَلَا طَائِرٍ يَطِيرُ بِجَنَاحَيْهِ إِلَّا أُمَمٌ أَمْثَالُكُمْ",
-    arti:  "Tidak ada seekor hewan pun di bumi dan burung-burung yang terbang dengan kedua sayapnya, melainkan semuanya merupakan umat (juga) seperti kamu.",
-    sumber:"QS. Al-An'am: 38"
-  }
+  ]
 };
 </script>
 
@@ -165,10 +153,6 @@ const DATA = {
     <div class="items" id="items"></div>
   </section>
 
-  <section class="ayat" id="ayat">
-    <p class="ar" lang="ar" dir="rtl" id="ayat-ar"></p>
-    <p class="tr"><span id="ayat-tr"></span> <span class="src" id="ayat-src"></span></p>
-  </section>
 </div>
 
 <script>
@@ -198,11 +182,6 @@ items.forEach(m => {
   $('items').appendChild(d);
 });
 
-if (DATA.ayat && DATA.ayat.arab) {
-  $('ayat-ar').textContent = DATA.ayat.arab;
-  $('ayat-tr').textContent = '“' + DATA.ayat.arti + '”';
-  $('ayat-src').textContent = '(' + DATA.ayat.sumber + ')';
-} else { $('ayat').remove(); }
 </script>
 </body>
 </html>

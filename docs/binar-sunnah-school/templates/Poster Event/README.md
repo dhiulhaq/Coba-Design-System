@@ -6,7 +6,6 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
 1. **Waktu dan tempat** (dua kartu terbesar)
 2. Foto dan judul
 3. Materi
-4. Ayat (opsional)
 
 ![Preview](preview.png)
 
@@ -25,7 +24,6 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
    - **Foto:** `foto`, `fotoPosisi` (misalnya `"center"`, `"right top"`, `"60% 40%"`)
    - **Waktu dan tempat:** `hari`, `tanggal`, `bulanTahun`, `jam`, `tempat`, `alamat`
    - **Materi:** `materi`, 2–4 butir dengan `ikon` pilihan `"hewan"`, `"cari"`, `"daun"`, `"kitab"`, `"bintang"`, atau `"orang"`
-   - **Ayat (opsional):** `ayat.arab`, `ayat.arti`, `ayat.sumber`. Kosongkan `arab` untuk menyembunyikan bagian ayat.
 3. Ekspor:
    ```bash
    node export.js poster-edukasi-reptil.png
@@ -41,7 +39,6 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
 | **Kartu waktu** (putih) | Ikon kalender, **angka tanggal 132px solid amber** (satu fokus), hari Sora 600 navy, bulan dan tahun, **pill jam navy** besar | `--surface`, `--binar-amber`, `--binar-navy` |
 | **Kartu tempat** (biru muda, lebih lebar) | Ikon pin, **nama tempat Sora 600 46px** navy, alamat. Pola bintang navy samar di pojok. | `--binar-blue-50` |
 | Kartu materi (putih) | Label "Apa yang dipelajari?", 2–4 kolom berisi ikon garis dalam lingkaran biru muda, judul navy, dan keterangan | `--surface`, `--binar-blue-50` |
-| Ayat (tanpa kartu) | Teks Arab Noto Naskh 32px navy rata kanan, terjemahan, dan sumber tebal navy | `--binar-navy` |
 
 ## Aturan
 - **Waktu dan tempat harus selalu jadi kartu terbesar setelah hero.** Jangan pindahkan ke bawah atau perkecil.

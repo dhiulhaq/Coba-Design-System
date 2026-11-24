@@ -439,13 +439,13 @@ Penyesuaian dari poster kajian lama:
   - **kartu waktu** putih: angka tanggal 132px solid amber, hari dan bulan, pill jam navy besar
   - **kartu tempat** biru muda yang lebih lebar: nama tempat Sora 600 46px, alamat
 - **Apa yang dipelajari:** kartu putih dengan 2–4 kolom ikon garis dalam lingkaran biru muda. Pilihan ikon: hewan, cari, daun, kitab, bintang, orang.
-- **Ayat (opsional):** teks Arab Noto Naskh rata kanan, terjemahan, dan sumber.
 
 Penyesuaian dari poster event lama:
 - **Latar:** gradien hijau-merah muda dan blob kuning diganti hero navy dengan foto yang memudar.
 - **Waktu dan tempat:** sebelumnya kecil di pojok kanan bawah, sekarang jadi kartu terbesar.
 - **Ikon materi:** lingkaran putih di atas amber diganti ikon garis navy di lingkaran biru muda. Amber hanya untuk angka tanggal.
-- **Font:** Poppins diganti Sora, Manrope, dan Noto Naskh Arabic.
+- **Font:** Poppins diganti Sora dan Manrope.
+- **Ayat dan terjemahan** di bagian bawah dihapus, supaya poster fokus ke foto, waktu, dan tempat.
 
 ### 10.3 Template lain (usulan)
 
