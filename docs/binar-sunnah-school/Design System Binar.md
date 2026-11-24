@@ -12,6 +12,20 @@ Design system untuk **Binar Sunnah School**, sekolah TK dan SD Islam berbasis Al
 
 ---
 
+## Dipakai bersama Claude Code
+
+Design system ini terhubung ke Claude Code lewat tiga file:
+
+| File | Fungsi |
+|---|---|
+| `.claude/skills/binar-design-system/SKILL.md` | Skill yang dimuat otomatis saat mengerjakan materi Binar. Berisi token, aturan wajib, dan checklist. |
+| `CLAUDE.md` (root repo) | Instruksi proyek: semua pekerjaan Binar wajib memakai skill di atas. |
+| `tokens.css` | Token CSS siap pakai untuk template dan halaman baru. |
+
+Setiap aturan baru yang disepakati dicatat di dokumen ini **dan** di `SKILL.md`.
+
+---
+
 ## 1. Profil brand
 
 | | |

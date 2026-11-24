@@ -1,0 +1,45 @@
+/* ============================================================
+   Design System Binar: tokens
+   Sumber: Design System Binar.md (bagian 3, 4, 5, 12)
+   Pakai: <link rel="stylesheet" href="tokens.css"> atau salin blok :root
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Brand */
+  --binar-navy: #2A3B8B;
+  --binar-amber: #F8A012;
+  --binar-blue: #386BB7;
+  --binar-blue-50: #E3EAF5;        /* panel sekunder, tint 14% dari --binar-blue */
+  --binar-overlay: rgba(42, 59, 139, .92);  /* overlay foto: navy, BUKAN hitam */
+
+  /* Netral */
+  --ink: #111111;
+  --text: #333333;
+  --muted: #5D6470;
+  --line: #DDE1E7;
+  --canvas: #F0F2F4;
+  --surface: #FFFFFF;
+  --panel-dark: #1F1F1F;           /* hanya footer web; JANGAN dipasangkan dengan amber */
+
+  /* Semantik */
+  --alert: #E24C4A;
+
+  /* Tipografi */
+  --font-display: "Sora", Arial, Helvetica, sans-serif;
+  --font-body: "Manrope", Arial, Helvetica, sans-serif;
+  --tracking-display: -0.03em;
+  --leading-body: 1.85;
+
+  /* Bentuk */
+  --radius-xs: 5px;
+  --radius-badge: 10px;
+  --radius-card: 25px;             /* web */
+  --radius-card-ig: 36px;          /* poster Instagram 1080px */
+  --radius-pill: 9999px;
+
+  /* Layout poster Instagram 1080×1350 */
+  --ig-margin: 56px;
+  --ig-gap: 20px;
+  --ig-pad: 40px;
+}
