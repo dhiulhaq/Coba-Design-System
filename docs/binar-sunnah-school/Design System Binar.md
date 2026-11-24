@@ -206,9 +206,15 @@ Pola label: kata kerja ajakan, misalnya "Temukan program kami", "Unduh PDF", "Li
 | Varian | Spesifikasi | Pemakaian |
 |---|---|---|
 | **Netral** | Pill putih, border `--line` 1.5px, teks `--text` Manrope 500 | Kategori, label umum (misalnya "Tahfidz", "SD Islam") |
-| **Highlight** | Pill `--binar-amber`, teks `--binar-navy` Manrope 600 | Data yang ingin ditonjolkan: target juz, jumlah surat, nama surat |
+| **Highlight** | Pill `--binar-amber`, teks **putih** Manrope 700 | Data yang ingin ditonjolkan: target juz, jumlah surat, nama surat |
 
-Di atas amber, teks selalu **navy**, tidak pernah hitam (aturan 3.4). Kontrasnya sekitar 4.8:1, aman untuk teks 22px ke atas di poster.
+**Aturan tag highlight:**
+- Di atas amber, teks **putih**, tidak pernah hitam (aturan 3.4).
+- Kontras putih di atas amber hanya sekitar 2.1:1, jadi:
+  - pakai weight 700
+  - ukuran minimal 22px di poster 1080px
+  - isinya hanya label pendek (1–4 kata), jangan kalimat atau info penting yang wajib terbaca
+- Tidak ada warna oranye tambahan. Tag highlight memakai amber brand yang sama dengan angka besar, supaya jumlah warna di desain tetap sedikit.
 
 Pill outline tipis, teks 11–12px. Isinya **target konkret** program, misalnya `100 Doa Harian` · `50 Hadits` · `Target Juz 30` · `25 Hadits` · `Target 15 Surat Pendek`. Di kartu event, tag dipakai untuk kategori, misalnya `akhlak` · `tarbiyah` · `kompetisi`.
 
@@ -314,7 +320,7 @@ Kanvas feed: **1080×1350 (4:5)**. Story: 1080×1920.
 **Poster Ujian Tahfidz** adalah layout bento dengan empat area:
 - **Header:** logo sejajar tepi kiri kartu, tag sejajar tepi kanan kartu.
 - **Kartu foto (kiri):** navy dengan foto santri di tengah dan gradien navy di bawah nama.
-- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Jumlah dan nama surat memakai **tag highlight** (amber, teks navy).
+- **Kartu info (kanan atas):** putih, berisi judul dan "Juz **30**". Angkanya Sora 600 200px, **solid amber**. Angka dan tag highlight (jumlah dan nama surat, amber dengan teks putih) dikelompokkan di bagian bawah kartu dengan jarak 28px.
 - **Kartu jadwal (kanan bawah):** `--binar-blue-50`, berisi badge tanggal navy dan tombol pill navy.
 
 Aturan template ini:
