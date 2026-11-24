@@ -40,6 +40,7 @@ Dalam urusan warna, font, dan aturan, skill ini **mengalahkan** skill desain umu
 ## Aturan wajib
 - 🚫 **Jangan pakai hitam/charcoal dengan amber.** Ini berlaku untuk panel, tombol, badge, overlay foto, dan latar. Kalau butuh warna gelap, pakai **navy**.
 - Overlay di atas foto memakai gradien **navy** (`rgba(42,59,139,.92)`), bukan hitam.
+- Foto yang memudar ke navy memakai mask dengan **kurva ease** (banyak titik bertahap, lihat bagian 7.0 dokumen), bukan gradien linear dua titik yang terlihat kasar.
 - **Satu kuning saja, yaitu amber `#F8A012`.** Jangan pakai kuning lemon atau oranye kedua.
 - Angka besar (juz, statistik) **solid amber**, tidak outline.
 - Tag ada dua varian:

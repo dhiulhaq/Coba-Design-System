@@ -287,6 +287,15 @@ Semua ornamen diturunkan dari **bintang empat sudut** di logo ("Binar" = cahaya)
 
 **Ikon kitab terbuka** (SVG garis navy 3px, dengan bintang amber kecil di atasnya) adalah ikon resmi untuk konteks ilmu dan kajian. Sumbernya ada di `templates/Poster Kajian/Poster Kajian.html` (elemen `.book`).
 
+**Foto yang memudar ke navy:** pakai mask dengan **kurva ease**, bukan gradien linear dua titik, supaya tidak ada batas yang terlihat kasar. Mulai dari 0% di tepi foto dan capai 100% di sekitar 72% lebar foto:
+
+```css
+--fade: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,.03) 8%, rgba(0,0,0,.1) 16%,
+  rgba(0,0,0,.22) 24%, rgba(0,0,0,.38) 32%, rgba(0,0,0,.56) 40%, rgba(0,0,0,.73) 48%,
+  rgba(0,0,0,.87) 56%, rgba(0,0,0,.96) 64%, #000 72%);
+mask-image: var(--fade);
+```
+
 Batasan:
 - Ornamen tidak boleh menimpa teks.
 - **Tidak ada lingkaran, orbit, atau bentuk apa pun di belakang foto santri.** Ornamen di template foto hanya bintang.
@@ -433,7 +442,7 @@ Penyesuaian dari poster kajian lama:
 - **Header:** logo di kiri, tag netral di kanan.
 - **Hero navy:**
   - eyebrow dengan garis penyerta, judul Sora 600 88px, subjudul
-  - **foto ilustrasi** di 58% sisi kanan, memudar ke navy dari kiri, dengan overlay navy tipis di bawah
+  - **foto ilustrasi** di 72% sisi kanan. Foto memudar ke navy dari kiri secara **halus** dengan kurva ease, bukan gradien linear yang kasar, plus overlay navy tipis di bawah
   - kalau foto kosong, tampil placeholder pola bintang dengan tulisan "Foto acara"
 - **Waktu dan tempat (dua kartu terbesar):**
   - **kartu waktu** putih: angka tanggal 132px solid amber, hari dan bulan, pill jam navy besar

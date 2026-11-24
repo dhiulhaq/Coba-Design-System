@@ -35,7 +35,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
 | Area | Isi | Token |
 |---|---|---|
 | Header | Logo di kiri, tag netral (misalnya "Event", "SD Islam") di kanan | `--margin: 56px` |
-| Hero (navy) | Eyebrow dengan garis penyerta, judul **Sora 600 88px**, subjudul. **Foto ilustrasi** di 58% sisi kanan, memudar ke navy, dengan overlay navy tipis di bawah. Bintang amber dan putih kecil. | `--binar-navy`, `--radius-card: 36px` |
+| Hero (navy) | Eyebrow dengan garis penyerta, judul **Sora 600 88px**, subjudul. **Foto ilustrasi** di 72% sisi kanan. Foto memudar ke navy secara **halus** dengan kurva ease (10 titik bertahap, bukan garis lurus), plus overlay navy tipis di bawah. Bintang amber dan putih kecil. | `--binar-navy`, `--radius-card: 36px` |
 | **Kartu waktu** (putih) | Ikon kalender, **angka tanggal 132px solid amber** (satu fokus), hari Sora 600 navy, bulan dan tahun, **pill jam navy** besar | `--surface`, `--binar-amber`, `--binar-navy` |
 | **Kartu tempat** (biru muda, lebih lebar) | Ikon pin, **nama tempat Sora 600 46px** navy, alamat. Pola bintang navy samar di pojok. | `--binar-blue-50` |
 | Kartu materi (putih) | Label "Apa yang dipelajari?", 2–4 kolom berisi ikon garis dalam lingkaran biru muda, judul navy, dan keterangan | `--surface`, `--binar-blue-50` |
