@@ -445,7 +445,6 @@ Penyesuaian dari poster kajian lama:
   - eyebrow dengan garis penyerta, judul Sora 600 88px, subjudul
   - **foto ilustrasi** di 72% sisi kanan. Foto memudar ke navy dari kiri secara **halus** dengan kurva ease, bukan gradien linear yang kasar, plus overlay navy tipis di bawah
   - kalau foto kosong, tampil placeholder pola bintang dengan tulisan "Foto acara"
-  - **`fotoGaya: "kartu"`**: foto tampil utuh tanpa pudar, sebagai kartu membulat (radius 26px) di 47% sisi kanan hero. Dipakai kalau beberapa subjek harus terlihat jelas semua, misalnya foto santri dari belakang
 - **Waktu dan tempat (dua kartu terbesar):**
   - **kartu waktu** putih: angka tanggal 132px solid amber, hari dan bulan, pill jam navy besar
   - **kartu tempat** biru muda yang lebih lebar: nama tempat Sora 600 46px, alamat
