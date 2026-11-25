@@ -448,7 +448,7 @@ Penyesuaian dari poster kajian lama:
 - **Waktu dan tempat (dua kartu terbesar):**
   - **kartu waktu** putih: angka tanggal 132px solid amber, hari dan bulan, pill jam navy besar
   - **kartu tempat** biru muda yang lebih lebar: nama tempat Sora 600 46px, alamat
-- **Apa yang dipelajari:** kartu putih dengan 2–4 kolom ikon garis dalam lingkaran biru muda. Pilihan ikon: hewan, cari, daun, kitab, bintang, orang.
+- **Apa yang dipelajari:** kartu putih dengan 2–4 kolom ikon garis dalam lingkaran biru muda. Pilihan ikon: hewan, cari, daun, kitab, bintang, orang, piala, mik, hadiah.
 
 Penyesuaian dari poster event lama:
 - **Latar:** gradien hijau-merah muda dan blob kuning diganti hero navy dengan foto yang memudar.

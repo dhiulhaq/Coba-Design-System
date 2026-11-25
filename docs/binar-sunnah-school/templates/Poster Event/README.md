@@ -23,7 +23,7 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
    - **Judul:** `eyebrow`, `judul`, `sub`
    - **Foto:** `foto`, `fotoPosisi` (misalnya `"center"`, `"right top"`, `"60% 40%"`)
    - **Waktu dan tempat:** `hari`, `tanggal`, `bulanTahun`, `jam`, `tempat`, `alamat`
-   - **Materi:** `materi`, 2–4 butir dengan `ikon` pilihan `"hewan"`, `"cari"`, `"daun"`, `"kitab"`, `"bintang"`, atau `"orang"`
+   - **Materi:** `materi`, 2–4 butir dengan `ikon` pilihan `"hewan"`, `"cari"`, `"daun"`, `"kitab"`, `"bintang"`, `"orang"`, `"piala"`, `"mik"`, atau `"hadiah"`
 3. Ekspor:
    ```bash
    node export.js poster-edukasi-reptil.png
