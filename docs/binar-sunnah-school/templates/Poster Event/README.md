@@ -21,7 +21,9 @@ Template Instagram feed **1080×1350 (4:5)** untuk acara sekolah yang memakai **
 1. Siapkan **foto ilustrasi acara** (JPG/PNG, minimal lebar 1000px), simpan sebagai `foto-acara.jpg` di folder ini, lalu isi `foto: "foto-acara.jpg"`. Selama `foto` kosong, area foto menampilkan placeholder "Foto acara". Foto akan memudar ke navy dari kiri, jadi subjek foto sebaiknya berada di sisi kanan.
 2. Ubah objek `DATA`:
    - **Judul:** `eyebrow`, `judul`, `sub`
-   - **Foto:** `foto`, `fotoPosisi` (misalnya `"center"`, `"right top"`, `"60% 40%"`)
+   - **Foto:** `foto`, `fotoPosisi` (misalnya `"center"`, `"right top"`, `"60% 40%"`), dan `fotoGaya`:
+     - `"pudar"` (bawaan): foto memudar ke navy dari kiri. Cocok untuk foto satu subjek atau tekstur.
+     - `"kartu"`: foto utuh tanpa pudar, dalam kartu membulat di kanan hero. Pakai ini kalau beberapa orang atau subjek di foto harus terlihat jelas semua, misalnya dua anak beserta kepalanya.
    - **Waktu dan tempat:** `hari`, `tanggal`, `bulanTahun`, `jam`, `tempat`, `alamat`
    - **Materi:** `materi`, 2–4 butir dengan `ikon` pilihan `"hewan"`, `"cari"`, `"daun"`, `"kitab"`, `"bintang"`, `"orang"`, `"piala"`, `"mik"`, `"hadiah"`, atau `"kamera"`
 3. Ekspor:
